@@ -50,15 +50,6 @@
             <ignoreComments>false</ignoreComments>
           </con:configuration>
         </con:assertion>
-        <con:assertion type="JsonPath Existence Match" id="0d4f8d5e-b007-495c-a133-9d0022873f7e" name="Check for existence of [sessionid]">
-          <con:configuration>
-            <path>$['sessionid']</path>
-            <content>true</content>
-            <allowWildcards>false</allowWildcards>
-            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
-            <ignoreComments>false</ignoreComments>
-          </con:configuration>
-        </con:assertion>
         <con:credentials>
           <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
           <con:authType>No Authorization</con:authType>
@@ -68,7 +59,7 @@
         <con:parameters>
           <con:entry key="password" value="Login123"/>
           <con:entry key="hasAttachment" value=""/>
-          <con:entry key="username" value="Login"/>
+          <con:entry key="username" value="${DataSource#Item ID}"/>
         </con:parameters>
         <con:parameterOrder>
           <con:entry>username</con:entry>
@@ -127,6 +118,11 @@
             <allowWildcards>false</allowWildcards>
             <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
             <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonSchemaCompliance" id="e4bedae4-c880-4a3c-a47f-9d9a8fbf07ee" name="JSON Schema Compliance">
+          <con:configuration>
+            <schemaUrl/>
           </con:configuration>
         </con:assertion>
         <con:credentials>

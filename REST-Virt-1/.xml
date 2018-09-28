@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:restMockAction name="/maps/api/geocode/json" method="GET" resourcePath="/maps/api/geocode/json" id="c73571c2-e040-44c6-9415-a55892495d4e" xmlns:con="http://eviware.com/soapui/config">
+<con:restMockAction name="" method="GET" resourcePath="" id="c73571c2-e040-44c6-9415-a55892495d4e" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
-    <con:setting id="c73571c2-e040-44c6-9415-a55892495d4efileName">%2Fmaps%2Fapi%2Fgeocode%2Fjson</con:setting>
+    <con:setting id="c73571c2-e040-44c6-9415-a55892495d4efileName"/>
   </con:settings>
   <con:defaultResponse>Bad Response</con:defaultResponse>
   <con:dispatchStyle>PARAMETER</con:dispatchStyle>

@@ -243,7 +243,7 @@
       <con:settings>
         <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
       </con:settings>
-      <con:endpoint>http://localhost:${#Project#endpoint}</con:endpoint>
+      <con:endpoint>http://localhost:8084</con:endpoint>
       <con:request/>
       <con:originalUri>http://localhost/login</con:originalUri>
       <con:credentials>
