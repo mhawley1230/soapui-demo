@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:restMockAction name="logout" method="GET" resourcePath="/logout" id="fe479986-40b4-44f8-8d31-4e677852f350" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="22685409-faf3-4411-8195-d31f6ef6c43efileName">logout</con:setting>
+    <con:setting id="fe479986-40b4-44f8-8d31-4e677852f350fileName">logout</con:setting>
+  </con:settings>
+  <con:defaultResponse xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Invalid Session Id Fault</con:defaultResponse>
+  <con:dispatchStyle>PARAMETER</con:dispatchStyle>
+  <con:dispatchConfig/>
+  <con:dispatchPath>//def queryString = mockRequest.getRequest().getQueryString()
+//
+//String[] fields = queryString.split("&amp;");
+//String[] kv;
+//
+//HashMap&lt;String, String> params = new HashMap&lt;String, String>()
+//for (int i = 0; i &lt; fields.length; ++i){
+//    kv = fields[i].split("=");
+//    if (2 == kv.length)
+//     params.put(kv[0], kv[1]); 
+//}
+//
+//def sessionid = params.get("sessionid")
+//
+//// check
+//if( !context.hasProperty( sessionid ))
+// return "Invalid Session Id Fault"
+//
+//// logout
+//context.removeProperty( context.getProperty( sessionid ))
+//context.removeProperty( sessionid )
+//requestContext.sessioninfo = "OK"
+//
+//return "Ok Response"</con:dispatchPath>
+  <con:dispatchXPath/>
+  <con:parameterDispatcherRuleContainer>
+    <con:ParameterDispatcherRule>
+      <con:ruleName>Rule 1</con:ruleName>
+      <con:parameterDispatcherCondition>
+        <con:parameterType>QUERY</con:parameterType>
+        <con:parameterOperationType>EXISTS</con:parameterOperationType>
+        <con:parameterName>sessionid</con:parameterName>
+        <con:parameterValue/>
+      </con:parameterDispatcherCondition>
+      <con:responseName>OK Response</con:responseName>
+    </con:ParameterDispatcherRule>
+  </con:parameterDispatcherRuleContainer>
+  <con:routeScript/>
+  <con:response name="OK Response" id="12418d74-71ec-4911-9fef-c600f682754c" httpResponseStatus="200" mediaType="application/json" dataSource="" compressedBodyContent="aced00057372002f636f6d2e657669776172652e736f617075692e696d706c2e737570706f72742e436f6d7072657373656456616c7565000b8b02c748eeab0200025a000a636f6d707265737365645b0004646174617400025b4278700070">
+    <con:settings/>
+    <con:responseContent>{"Successfully logged out session" : "OK"}</con:responseContent>
+  </con:response>
+  <con:response name="Invalid Session Id Fault" id="3bcb75eb-61b6-46c5-982b-b6ec5c692596" httpResponseStatus="404" mediaType="application/json" dataSource="">
+    <con:settings/>
+    <con:responseContent>{"Failed" : "Invalid Session Id"}</con:responseContent>
+  </con:response>
+</con:restMockAction>

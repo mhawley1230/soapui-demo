@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:interface xsi:type="con:RestService" id="8f52a90a-b2a2-497f-9d75-55b1fa4950d9" wadlVersion="http://wadl.dev.java.net/2009/02" name="REST Service" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="8b4877da-9c17-4d74-baf9-2881747b6a79fileName">REST-Service</con:setting>
+    <con:setting id="8f52a90a-b2a2-497f-9d75-55b1fa4950d9fileName">REST-Service</con:setting>
+  </con:settings>
+  <con:definitionCache type="TEXT" rootPart=""/>
+  <con:endpoints>
+    <con:endpoint>http://localhost:8084</con:endpoint>
+  </con:endpoints>
+  <con:environmentSpec>
+    <con:entry environmentId="3c2b8de8-35c0-4232-b2cf-43bc1f990db1">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
+</con:interface>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:restMockService port="8084" path="/" host="localhost" name="REST Virt" routeModeEnabled="false" id="82ac6fe2-6c46-43f0-aa48-e1c54e1df140" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="2a6dfe00-ebf7-44f2-8b96-64c69a5b5ed4fileName">REST-Virt</con:setting>
+    <con:setting id="82ac6fe2-6c46-43f0-aa48-e1c54e1df140fileName">REST-Virt</con:setting>
+  </con:settings>
+  <con:properties/>
+  <con:constraints>
+    <con:congestion>0</con:congestion>
+    <con:inputBandwidth>-1</con:inputBandwidth>
+    <con:outputBandwidth>-1</con:outputBandwidth>
+    <con:maxThreadPoolCapacity>20</con:maxThreadPoolCapacity>
+    <con:coreThreadPoolCapacity>5</con:coreThreadPoolCapacity>
+    <con:minLatency>100</con:minLatency>
+    <con:minApplicationDelay>0</con:minApplicationDelay>
+    <con:virtError>
+      <con:code>200</con:code>
+      <con:start>0</con:start>
+      <con:endless>true</con:endless>
+    </con:virtError>
+  </con:constraints>
+  <con:dataSources>
+    <con:dataSource>
+      <con:dataSource type="Data Generator">
+        <con:configuration>
+          <generatedDataCount>10</generatedDataCount>
+          <generatorsTotalNumber>1</generatorsTotalNumber>
+          <lastSelectedProperty>0</lastSelectedProperty>
+          <GeneratorType0>INT</GeneratorType0>
+          <PropertyName0>sessionID</PropertyName0>
+          <repetitionCountsessionID>0</repetitionCountsessionID>
+          <repeatValuessessionID>false</repeatValuessessionID>
+          <IntegerDataGeneratorMinValuesessionID>10000000</IntegerDataGeneratorMinValuesessionID>
+          <IntegerDataGeneratorMaxValuesessionID>99999999</IntegerDataGeneratorMaxValuesessionID>
+          <IntegerDataGeneratorStepValuesessionID>1</IntegerDataGeneratorStepValuesessionID>
+          <IntegerDataGeneratorConsequentValuessessionID>false</IntegerDataGeneratorConsequentValuessessionID>
+          <escapeSpaceSequence/>
+        </con:configuration>
+      </con:dataSource>
+      <con:name>idGenerator</con:name>
+      <con:property>sessionID</con:property>
+    </con:dataSource>
+  </con:dataSources>
+  <con:headerValidator type="NONE"/>
+</con:restMockService>

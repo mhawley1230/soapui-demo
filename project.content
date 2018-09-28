@@ -1,0 +1,10 @@
+REST-Service\Login.xml
+REST-Service\buy.xml
+REST-Service\logout.xml
+REST-Service\search.xml
+REST-Service-TestSuite\REST-Service-TestCase.xml
+REST-Virt\%2Flogin.xml
+REST-Virt\buy.xml
+REST-Virt\login.xml
+REST-Virt\logout.xml
+REST-Virt\search.xml
