@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:restMockAction name="/maps/api/geocode/json" method="GET" resourcePath="/maps/api/geocode/json" id="c73571c2-e040-44c6-9415-a55892495d4e" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="c73571c2-e040-44c6-9415-a55892495d4efileName">%2Fmaps%2Fapi%2Fgeocode%2Fjson</con:setting>
+  </con:settings>
+  <con:defaultResponse>Bad Response</con:defaultResponse>
+  <con:dispatchStyle>PARAMETER</con:dispatchStyle>
+  <con:dispatchConfig/>
+  <con:dispatchXPath/>
+  <con:parameterDispatcherRuleContainer>
+    <con:ParameterDispatcherRule>
+      <con:ruleName>address=Boston</con:ruleName>
+      <con:parameterDispatcherCondition>
+        <con:parameterType>QUERY</con:parameterType>
+        <con:parameterOperationType>EQUALS</con:parameterOperationType>
+        <con:parameterName>address</con:parameterName>
+        <con:parameterValue>Boston</con:parameterValue>
+      </con:parameterDispatcherCondition>
+      <con:responseName>For address=Boston</con:responseName>
+    </con:ParameterDispatcherRule>
+    <con:ParameterDispatcherRule>
+      <con:ruleName>address=New%20York</con:ruleName>
+      <con:parameterDispatcherCondition>
+        <con:parameterType>QUERY</con:parameterType>
+        <con:parameterOperationType>EQUALS</con:parameterOperationType>
+        <con:parameterName>address</con:parameterName>
+        <con:parameterValue>New York</con:parameterValue>
+      </con:parameterDispatcherCondition>
+      <con:responseName>For address=New%20York</con:responseName>
+    </con:ParameterDispatcherRule>
+    <con:ParameterDispatcherRule>
+      <con:ruleName>address=Seattle</con:ruleName>
+      <con:parameterDispatcherCondition>
+        <con:parameterType>QUERY</con:parameterType>
+        <con:parameterOperationType>EQUALS</con:parameterOperationType>
+        <con:parameterName>address</con:parameterName>
+        <con:parameterValue>Seattle</con:parameterValue>
+      </con:parameterDispatcherCondition>
+      <con:responseName>For address=Seattle</con:responseName>
+    </con:ParameterDispatcherRule>
+    <con:ParameterDispatcherRule>
+      <con:ruleName>bad response</con:ruleName>
+      <con:parameterDispatcherCondition>
+        <con:parameterType>QUERY</con:parameterType>
+        <con:parameterOperationType>EQUALS</con:parameterOperationType>
+        <con:parameterName>address</con:parameterName>
+        <con:parameterValue>ajgnijueanrg ubqwuerb guqwe rg</con:parameterValue>
+      </con:parameterDispatcherCondition>
+      <con:responseName>For address=Boston</con:responseName>
+    </con:ParameterDispatcherRule>
+  </con:parameterDispatcherRuleContainer>
+  <con:routeEnabled>false</con:routeEnabled>
+  <con:routeScript/>
+  <con:saveRoutedResponse>true</con:saveRoutedResponse>
+  <con:response name="For address=Boston" id="0ebb4ccf-90f9-4717-ac8e-001c6b30c64b" httpResponseStatus="200" mediaType="application/json" encoding="UTF-8" dataSource="">
+    <con:settings/>
+    <con:responseContent>{
+   "results" : [
+      {
+         "address_components" : [
+            {
+               "long_name" : "Boston",
+               "short_name" : "Boston",
+               "types" : [ "locality", "political" ]
+            },
+            {
+               "long_name" : "Suffolk County",
+               "short_name" : "Suffolk County",
+               "types" : [ "administrative_area_level_2", "political" ]
+            },
+            {
+               "long_name" : "Massachusetts",
+               "short_name" : "MA",
+               "types" : [ "administrative_area_level_1", "political" ]
+            },
+            {
+               "long_name" : "United States",
+               "short_name" : "US",
+               "types" : [ "country", "political" ]
+            }
+         ],
+         "formatted_address" : "Boston, MA, USA",
+         "geometry" : {
+            "bounds" : {
+               "northeast" : {
+                  "lat" : 42.40081989999999,
+                  "lng" : -70.749455
+               },
+               "southwest" : {
+                  "lat" : 42.22788,
+                  "lng" : -71.191113
+               }
+            },
+            "location" : {
+               "lat" : 42.3600825,
+               "lng" : -71.0588801
+            },
+            "location_type" : "APPROXIMATE",
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 42.40081989999999,
+                  "lng" : -70.749455
+               },
+               "southwest" : {
+                  "lat" : 42.22788,
+                  "lng" : -71.191113
+               }
+            }
+         },
+         "place_id" : "ChIJGzE9DS1l44kRoOhiASS_fHg",
+         "types" : [ "locality", "political" ]
+      }
+   ],
+   "status" : "OK"
+}</con:responseContent>
+    <con:header>
+      <con:name>X-Frame-Options</con:name>
+      <con:value>SAMEORIGIN</con:value>
+    </con:header>
+    <con:header>
+      <con:name>Cache-Control</con:name>
+      <con:value>public, max-age=86400</con:value>
+    </con:header>
+    <con:header>
+      <con:name>Server</con:name>
+      <con:value>mafe</con:value>
+    </con:header>
+    <con:header>
+      <con:name>Access-Control-Allow-Origin</con:name>
+      <con:value>*</con:value>
+    </con:header>
+    <con:header>
+      <con:name>Connection</con:name>
+      <con:value>close</con:value>
+    </con:header>
+    <con:header>
+      <con:name>Vary</con:name>
+      <con:value>Accept-Language</con:value>
+    </con:header>
+    <con:header>
+      <con:name>Expires</con:name>
+      <con:value>Thu, 15 Feb 2018 19:49:24 GMT</con:value>
+    </con:header>
+    <con:header>
+      <con:name>X-XSS-Protection</con:name>
+      <con:value>1; mode=block</con:value>
+    </con:header>
+    <con:header>
+      <con:name>Date</con:name>
+      <con:value>Wed, 14 Feb 2018 19:49:24 GMT</con:value>
+    </con:header>
+  </con:response>
+  <con:response name="For address=New%20York" id="3a123e25-35ad-4a30-8a9d-a2f476f68622" httpResponseStatus="200" mediaType="application/json" encoding="UTF-8" dataSource="">
+    <con:settings/>
+    <con:responseContent>{
+   "results" : [
+      {
+         "address_components" : [
+            {
+               "long_name" : "New York",
+               "short_name" : "New York",
+               "types" : [ "locality", "political" ]
+            },
+            {
+               "long_name" : "New York",
+               "short_name" : "NY",
+               "types" : [ "administrative_area_level_1", "political" ]
+            },
+            {
+               "long_name" : "United States",
+               "short_name" : "US",
+               "types" : [ "country", "political" ]
+            }
+         ],
+         "formatted_address" : "New York, NY, USA",
+         "geometry" : {
+            "bounds" : {
+               "northeast" : {
+                  "lat" : 40.9175771,
+                  "lng" : -73.70027209999999
+               },
+               "southwest" : {
+                  "lat" : 40.4773991,
+                  "lng" : -74.25908989999999
+               }
+            },
+            "location" : {
+               "lat" : 40.7127753,
+               "lng" : -74.0059728
+            },
+            "location_type" : "APPROXIMATE",
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 40.9175771,
+                  "lng" : -73.70027209999999
+               },
+               "southwest" : {
+                  "lat" : 40.4773991,
+                  "lng" : -74.25908989999999
+               }
+            }
+         },
+         "place_id" : "ChIJOwg_06VPwokRYv534QaPC8g",
+         "types" : [ "locality", "political" ]
+      }
+   ],
+   "status" : "OK"
+}</con:responseContent>
+    <con:header>
+      <con:name>X-Frame-Options</con:name>
+      <con:value>SAMEORIGIN</con:value>
+    </con:header>
+    <con:header>
+      <con:name>Cache-Control</con:name>
+      <con:value>public, max-age=86400</con:value>
+    </con:header>
+    <con:header>
+      <con:name>Server</con:name>
+      <con:value>mafe</con:value>
+    </con:header>
+    <con:header>
+      <con:name>Access-Control-Allow-Origin</con:name>
+      <con:value>*</con:value>
+    </con:header>
+    <con:header>
+      <con:name>Connection</con:name>
+      <con:value>close</con:value>
+    </con:header>
+    <con:header>
+      <con:name>Vary</con:name>
+      <con:value>Accept-Language</con:value>
+    </con:header>
+    <con:header>
+      <con:name>Expires</con:name>
+      <con:value>Thu, 15 Feb 2018 19:49:34 GMT</con:value>
+    </con:header>
+    <con:header>
+      <con:name>X-XSS-Protection</con:name>
+      <con:value>1; mode=block</con:value>
+    </con:header>
+    <con:header>
+      <con:name>Date</con:name>
+      <con:value>Wed, 14 Feb 2018 19:49:34 GMT</con:value>
+    </con:header>
+  </con:response>
+  <con:response name="For address=Seattle" id="d575d796-a1f9-4b37-a788-324a58d5e12d" httpResponseStatus="200" mediaType="application/json" encoding="UTF-8" dataSource="">
+    <con:settings/>
+    <con:responseContent>{
+   "results" : [
+      {
+         "address_components" : [
+            {
+               "long_name" : "Seattle",
+               "short_name" : "Seattle",
+               "types" : [ "locality", "political" ]
+            },
+            {
+               "long_name" : "King County",
+               "short_name" : "King County",
+               "types" : [ "administrative_area_level_2", "political" ]
+            },
+            {
+               "long_name" : "Washington",
+               "short_name" : "WA",
+               "types" : [ "administrative_area_level_1", "political" ]
+            },
+            {
+               "long_name" : "United States",
+               "short_name" : "US",
+               "types" : [ "country", "political" ]
+            }
+         ],
+         "formatted_address" : "Seattle, WA, USA",
+         "geometry" : {
+            "bounds" : {
+               "northeast" : {
+                  "lat" : 47.734145,
+                  "lng" : -122.2244331
+               },
+               "southwest" : {
+                  "lat" : 47.4919119,
+                  "lng" : -122.4596959
+               }
+            },
+            "location" : {
+               "lat" : 47.6062095,
+               "lng" : -122.3320708
+            },
+            "location_type" : "APPROXIMATE",
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 47.734145,
+                  "lng" : -122.2244331
+               },
+               "southwest" : {
+                  "lat" : 47.4919119,
+                  "lng" : -122.4596959
+               }
+            }
+         },
+         "place_id" : "ChIJVTPokywQkFQRmtVEaUZlJRA",
+         "types" : [ "locality", "political" ]
+      }
+   ],
+   "status" : "OK"
+}</con:responseContent>
+    <con:header>
+      <con:name>X-Frame-Options</con:name>
+      <con:value>SAMEORIGIN</con:value>
+    </con:header>
+    <con:header>
+      <con:name>Cache-Control</con:name>
+      <con:value>public, max-age=86400</con:value>
+    </con:header>
+    <con:header>
+      <con:name>Server</con:name>
+      <con:value>mafe</con:value>
+    </con:header>
+    <con:header>
+      <con:name>Access-Control-Allow-Origin</con:name>
+      <con:value>*</con:value>
+    </con:header>
+    <con:header>
+      <con:name>Connection</con:name>
+      <con:value>close</con:value>
+    </con:header>
+    <con:header>
+      <con:name>Vary</con:name>
+      <con:value>Accept-Language</con:value>
+    </con:header>
+    <con:header>
+      <con:name>Expires</con:name>
+      <con:value>Thu, 15 Feb 2018 19:49:42 GMT</con:value>
+    </con:header>
+    <con:header>
+      <con:name>X-XSS-Protection</con:name>
+      <con:value>1; mode=block</con:value>
+    </con:header>
+    <con:header>
+      <con:name>Date</con:name>
+      <con:value>Wed, 14 Feb 2018 19:49:42 GMT</con:value>
+    </con:header>
+  </con:response>
+  <con:response name="Bad Response" id="9acc486b-a4ab-45cf-8b2b-c866df76cfd8" httpResponseStatus="200" mediaType="application/json" encoding="UTF-8" dataSource="">
+    <con:settings/>
+    <con:responseContent>{
+   "results" : [],
+   "status" : "ZERO_RESULTS"
+}</con:responseContent>
+    <con:header>
+      <con:name>X-Frame-Options</con:name>
+      <con:value>SAMEORIGIN</con:value>
+    </con:header>
+    <con:header>
+      <con:name>Cache-Control</con:name>
+      <con:value>public, max-age=86400</con:value>
+    </con:header>
+    <con:header>
+      <con:name>Server</con:name>
+      <con:value>mafe</con:value>
+    </con:header>
+    <con:header>
+      <con:name>Access-Control-Allow-Origin</con:name>
+      <con:value>*</con:value>
+    </con:header>
+    <con:header>
+      <con:name>Connection</con:name>
+      <con:value>close</con:value>
+    </con:header>
+    <con:header>
+      <con:name>Vary</con:name>
+      <con:value>Accept-Language</con:value>
+    </con:header>
+    <con:header>
+      <con:name>Expires</con:name>
+      <con:value>Thu, 15 Feb 2018 19:49:47 GMT</con:value>
+    </con:header>
+    <con:header>
+      <con:name>X-XSS-Protection</con:name>
+      <con:value>1; mode=block</con:value>
+    </con:header>
+    <con:header>
+      <con:name>Date</con:name>
+      <con:value>Wed, 14 Feb 2018 19:49:47 GMT</con:value>
+    </con:header>
+  </con:response>
+</con:restMockAction>

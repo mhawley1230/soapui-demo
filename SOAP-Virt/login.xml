@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:mockOperation name="login" id="b271c7fe-ed4a-4454-b2c6-6f135d1ee6ae" interface="SOAP Service" operation="login" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="b271c7fe-ed4a-4454-b2c6-6f135d1ee6aefileName">login</con:setting>
+  </con:settings>
+  <con:defaultResponse>Response 1</con:defaultResponse>
+  <con:dispatchStyle>SEQUENCE</con:dispatchStyle>
+  <con:dispatchConfig/>
+  <con:dispatchXPath/>
+  <con:routeScript/>
+  <con:response name="Response 1" id="a305224a-ee6c-4215-a465-7fe065b4ab8e" httpResponseStatus="200" encoding="UTF-8" dataSource="DataSource 1">
+    <con:settings/>
+    <con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sam="http://www.soapui.org/sample/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <sam:loginResponse>
+        
+		<sessionid>${#MockResponse#sessionID}</sessionid>
+      </sam:loginResponse>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:responseContent>
+    <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.soapui.org/sample/login"/>
+  </con:response>
+</con:mockOperation>

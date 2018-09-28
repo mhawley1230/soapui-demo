@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:interface xsi:type="con:RestService" id="513bfb62-6070-4f1f-b0e7-8ec472fae660" name="Ecom" type="rest_ex" wadlVersion="https://swagger.io/swagger2/specification" definitionUrl="https://api.swaggerhub.com/apis/SE-Design/ecom/1.0.0" basePath="/SE-Design/ecom/1.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:description xsi:nil="true"/>
+  <con:settings>
+    <con:setting id="513bfb62-6070-4f1f-b0e7-8ec472fae660fileName">Ecom</con:setting>
+  </con:settings>
+  <con:definitionCache type="TEXT" rootPart="https://api.swaggerhub.com/apis/SE-Design/ecom/1.0.0">
+    <con:part>
+      <con:url>https://api.swaggerhub.com/apis/SE-Design/ecom/1.0.0</con:url>
+      <con:content>{"swagger":"2.0","info":{"version":"1.0.0","title":"Ecom"},"paths":{"/login":{"get":{"operationId":"Login","consumes":["application/json"],"parameters":[{"name":"username","in":"query","required":false,"type":"string"},{"name":"password","in":"query","required":false,"type":"string"},{"name":"sample","in":"header","required":false,"type":"string"}],"responses":{"200":{"description":"OK"}}}},"/buy":{"get":{"operationId":"buy","parameters":[{"name":"sessionid","in":"query","required":false,"type":"string"},{"name":"buystring","in":"query","required":false,"type":"string"}],"responses":{"200":{"description":"OK"}}}},"/logout":{"get":{"operationId":"logout","parameters":[{"name":"sessionid","in":"query","required":false,"type":"string"}],"responses":{"200":{"description":"OK"}}}},"/search":{"get":{"operationId":"search","parameters":[{"name":"sessionid","in":"query","required":false,"type":"string"},{"name":"searchstring","in":"query","required":false,"type":"string"},{"name":"HeaderValue","in":"header","required":false,"type":"string"}],"responses":{"200":{"description":"OK"}}}}},"host":"virtserver.swaggerhub.com","basePath":"/SE-Design/ecom/1.0.0","schemes":["https"]}</con:content>
+      <con:type>https://swagger.io/swagger2/specification</con:type>
+    </con:part>
+  </con:definitionCache>
+  <con:endpoints>
+    <con:endpoint>https://virtserver.swaggerhub.com</con:endpoint>
+  </con:endpoints>
+</con:interface>

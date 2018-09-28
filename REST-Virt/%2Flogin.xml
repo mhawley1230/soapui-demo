@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:restMockAction name="/login" method="POST" resourcePath="/login" id="6254e116-6ef2-48c3-a0be-da8867e64c29" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="6254e116-6ef2-48c3-a0be-da8867e64c29fileName">%2Flogin</con:setting>
+  </con:settings>
+  <con:defaultResponse>no attachment</con:defaultResponse>
+  <con:dispatchStyle>PARAMETER</con:dispatchStyle>
+  <con:dispatchConfig/>
+  <con:dispatchXPath/>
+  <con:parameterDispatcherRuleContainer>
+    <con:ParameterDispatcherRule>
+      <con:ruleName>Rule 1</con:ruleName>
+      <con:parameterDispatcherCondition>
+        <con:parameterType>QUERY</con:parameterType>
+        <con:parameterOperationType>EXISTS</con:parameterOperationType>
+        <con:parameterName>username</con:parameterName>
+        <con:parameterValue>x-www-form-encoded</con:parameterValue>
+      </con:parameterDispatcherCondition>
+      <con:responseName>Response 1</con:responseName>
+    </con:ParameterDispatcherRule>
+  </con:parameterDispatcherRuleContainer>
+  <con:routeScript/>
+  <con:response name="Response 1" id="b7e517bc-fe11-4ded-ae10-2b6625cf77b2" httpResponseStatus="200" mediaType="application/json" dataSource="">
+    <con:settings/>
+    <con:responseContent>{"contains":"correct header"}</con:responseContent>
+  </con:response>
+  <con:response name="no attachment" id="428eb13d-dca5-4c3e-81fd-aed379a2fa57" httpResponseStatus="400" mediaType="application/json" dataSource="">
+    <con:settings/>
+    <con:responseContent>{"error":"error"}</con:responseContent>
+  </con:response>
+</con:restMockAction>

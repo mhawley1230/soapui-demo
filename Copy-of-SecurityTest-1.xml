@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:securityTest id="e413090c-168b-47aa-8648-dcfd9f985a90" testCaseId="d9ca4e77-3e74-4beb-b971-9b01f268c809" name="Copy of SecurityTest 1" failSecurityTestOnScanErrors="true" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="e413090c-168b-47aa-8648-dcfd9f985a90fileName">Copy-of-SecurityTest-1</con:setting>
+  </con:settings>
+  <con:testStepSecurityTest>
+    <con:testStepId>2eeaca12-6b03-43a4-b4c2-96cf94acd41b</con:testStepId>
+    <con:testStepSecurityScan type="SQLInjectionScan" name="SQL Injection" id="46a59d49-b9f4-4378-8524-e4eda37c1053" applyForFailedStep="false" disabled="false">
+      <con:settings/>
+      <con:config xsi:type="con:SQLInjectionScan" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:sqlInjectionStrings>' or '1'='1</con:sqlInjectionStrings>
+        <con:sqlInjectionStrings>'--</con:sqlInjectionStrings>
+        <con:sqlInjectionStrings>1'</con:sqlInjectionStrings>
+        <con:sqlInjectionStrings>admin'--</con:sqlInjectionStrings>
+        <con:sqlInjectionStrings>/*!10000%201/0%20*/</con:sqlInjectionStrings>
+        <con:sqlInjectionStrings>/*!10000 1/0 */</con:sqlInjectionStrings>
+        <con:sqlInjectionStrings>1/0</con:sqlInjectionStrings>
+        <con:sqlInjectionStrings>'%20o/**/r%201/0%20--</con:sqlInjectionStrings>
+        <con:sqlInjectionStrings>' o/**/r 1/0 --</con:sqlInjectionStrings>
+        <con:sqlInjectionStrings>;</con:sqlInjectionStrings>
+        <con:sqlInjectionStrings>'%20and%201=2%20--</con:sqlInjectionStrings>
+        <con:sqlInjectionStrings>' and 1=2 --</con:sqlInjectionStrings>
+        <con:sqlInjectionStrings>test�%20UNION%20select%201,%20@@version,%201,%201;�</con:sqlInjectionStrings>
+        <con:sqlInjectionStrings>test� UNION select 1, @@version, 1, 1;�</con:sqlInjectionStrings>
+      </con:config>
+      <con:assertion type="Sensitive Information Exposure" id="b4117df1-904c-473e-824d-14a34f0b0d3b" name="Sensitive Information Exposure">
+        <con:configuration/>
+      </con:assertion>
+      <con:testStep xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+      <con:checkedParameters xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:parameters label="password1" parameterName="Request" xpath="declare namespace sam='http://www.soapui.org/sample/'; //sam:login[1]/password[1]" checked="true"/>
+        <con:parameters label="username1" parameterName="Request" xpath="declare namespace sam='http://www.soapui.org/sample/'; //sam:login[1]/username[1]" checked="true"/>
+      </con:checkedParameters>
+      <con:executionStrategy xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:strategy>ONE_BY_ONE</con:strategy>
+        <con:delay>100</con:delay>
+      </con:executionStrategy>
+    </con:testStepSecurityScan>
+    <con:testStepSecurityScan type="XPathInjectionSecurityScan" name="XPath Injection" id="818abe06-d374-4fe2-b741-2cd559477120" applyForFailedStep="false" disabled="false">
+      <con:settings/>
+      <con:config xsi:type="con:XPathInjection" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:xpathList>or name(//users/LoginID[1]) = 'LoginID' or 'a'='b</con:xpathList>
+        <con:xpathList>' or '1'='1</con:xpathList>
+        <con:xpathList>1/0</con:xpathList>
+        <con:xpathList>'%20o/**/r%201/0%20--</con:xpathList>
+        <con:xpathList>' o/**/r 1/0 --</con:xpathList>
+        <con:xpathList>;</con:xpathList>
+        <con:xpathList>'%20and%201=2%20--</con:xpathList>
+        <con:xpathList>' and 1=2 --</con:xpathList>
+        <con:xpathList>test�%20UNION%20select%201,%20@@version,%201,%201;�</con:xpathList>
+        <con:xpathList>test� UNION select 1, @@version, 1, 1;�</con:xpathList>
+      </con:config>
+      <con:assertion type="Sensitive Information Exposure" id="7b798685-14f8-424a-a855-7d1114c56abf" name="Sensitive Information Exposure">
+        <con:configuration/>
+      </con:assertion>
+      <con:testStep xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+      <con:checkedParameters xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:parameters label="password1" parameterName="Request" xpath="declare namespace sam='http://www.soapui.org/sample/'; //sam:login[1]/password[1]" checked="true"/>
+        <con:parameters label="username1" parameterName="Request" xpath="declare namespace sam='http://www.soapui.org/sample/'; //sam:login[1]/username[1]" checked="true"/>
+      </con:checkedParameters>
+      <con:executionStrategy xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:strategy>ONE_BY_ONE</con:strategy>
+        <con:delay>100</con:delay>
+      </con:executionStrategy>
+    </con:testStepSecurityScan>
+  </con:testStepSecurityTest>
+  <con:testStepSecurityTest>
+    <con:testStepId>e46d9c23-2ee1-47d1-96d7-b77e7daa9fe8</con:testStepId>
+    <con:testStepSecurityScan type="SQLInjectionScan" name="SQL Injection" id="b3524136-5997-473d-aad5-9f95daa32916" applyForFailedStep="false" disabled="false">
+      <con:settings/>
+      <con:config xsi:type="con:SQLInjectionScan" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:sqlInjectionStrings>' or '1'='1</con:sqlInjectionStrings>
+        <con:sqlInjectionStrings>'--</con:sqlInjectionStrings>
+        <con:sqlInjectionStrings>1'</con:sqlInjectionStrings>
+        <con:sqlInjectionStrings>admin'--</con:sqlInjectionStrings>
+        <con:sqlInjectionStrings>/*!10000%201/0%20*/</con:sqlInjectionStrings>
+        <con:sqlInjectionStrings>/*!10000 1/0 */</con:sqlInjectionStrings>
+        <con:sqlInjectionStrings>1/0</con:sqlInjectionStrings>
+        <con:sqlInjectionStrings>'%20o/**/r%201/0%20--</con:sqlInjectionStrings>
+        <con:sqlInjectionStrings>' o/**/r 1/0 --</con:sqlInjectionStrings>
+        <con:sqlInjectionStrings>;</con:sqlInjectionStrings>
+        <con:sqlInjectionStrings>'%20and%201=2%20--</con:sqlInjectionStrings>
+        <con:sqlInjectionStrings>' and 1=2 --</con:sqlInjectionStrings>
+        <con:sqlInjectionStrings>test�%20UNION%20select%201,%20@@version,%201,%201;�</con:sqlInjectionStrings>
+        <con:sqlInjectionStrings>test� UNION select 1, @@version, 1, 1;�</con:sqlInjectionStrings>
+      </con:config>
+      <con:assertion type="Sensitive Information Exposure" id="975f5701-8600-42ea-9a56-af55ae213bcb" name="Sensitive Information Exposure">
+        <con:configuration/>
+      </con:assertion>
+      <con:testStep xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+      <con:checkedParameters xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:parameters label="sessionid" parameterName="Request" xpath="declare namespace sam='http://www.soapui.org/sample/'; //sam:search[1]/sessionid[1]" checked="true"/>
+        <con:parameters label="searchstring" parameterName="Request" xpath="declare namespace sam='http://www.soapui.org/sample/'; //sam:search[1]/searchstring[1]" checked="true"/>
+      </con:checkedParameters>
+      <con:executionStrategy xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:strategy>ONE_BY_ONE</con:strategy>
+        <con:delay>100</con:delay>
+      </con:executionStrategy>
+    </con:testStepSecurityScan>
+    <con:testStepSecurityScan type="XPathInjectionSecurityScan" name="XPath Injection" id="f5402872-c198-44d7-bbf1-54a5d177ae59" applyForFailedStep="false" disabled="false">
+      <con:settings/>
+      <con:config xsi:type="con:XPathInjection" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:xpathList>or name(//users/LoginID[1]) = 'LoginID' or 'a'='b</con:xpathList>
+        <con:xpathList>' or '1'='1</con:xpathList>
+        <con:xpathList>1/0</con:xpathList>
+        <con:xpathList>'%20o/**/r%201/0%20--</con:xpathList>
+        <con:xpathList>' o/**/r 1/0 --</con:xpathList>
+        <con:xpathList>;</con:xpathList>
+        <con:xpathList>'%20and%201=2%20--</con:xpathList>
+        <con:xpathList>' and 1=2 --</con:xpathList>
+        <con:xpathList>test�%20UNION%20select%201,%20@@version,%201,%201;�</con:xpathList>
+        <con:xpathList>test� UNION select 1, @@version, 1, 1;�</con:xpathList>
+      </con:config>
+      <con:assertion type="Sensitive Information Exposure" id="ba7656e3-36d2-4954-b3ee-f9c1ee18f3fb" name="Sensitive Information Exposure">
+        <con:configuration/>
+      </con:assertion>
+      <con:testStep xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+      <con:checkedParameters xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:parameters label="sessionid" parameterName="Request" xpath="declare namespace sam='http://www.soapui.org/sample/'; //sam:search[1]/sessionid[1]" checked="true"/>
+        <con:parameters label="searchstring" parameterName="Request" xpath="declare namespace sam='http://www.soapui.org/sample/'; //sam:search[1]/searchstring[1]" checked="true"/>
+      </con:checkedParameters>
+      <con:executionStrategy xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:strategy>ONE_BY_ONE</con:strategy>
+        <con:delay>100</con:delay>
+      </con:executionStrategy>
+    </con:testStepSecurityScan>
+  </con:testStepSecurityTest>
+  <con:testStepSecurityTest>
+    <con:testStepId>d893db99-2f8f-40c6-a76f-581bc8f10e46</con:testStepId>
+    <con:testStepSecurityScan type="SQLInjectionScan" name="SQL Injection" id="f56072f5-2071-4e6a-b1a3-234866fefcc4" applyForFailedStep="false" disabled="false">
+      <con:settings/>
+      <con:config xsi:type="con:SQLInjectionScan" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:sqlInjectionStrings>' or '1'='1</con:sqlInjectionStrings>
+        <con:sqlInjectionStrings>'--</con:sqlInjectionStrings>
+        <con:sqlInjectionStrings>1'</con:sqlInjectionStrings>
+        <con:sqlInjectionStrings>admin'--</con:sqlInjectionStrings>
+        <con:sqlInjectionStrings>/*!10000%201/0%20*/</con:sqlInjectionStrings>
+        <con:sqlInjectionStrings>/*!10000 1/0 */</con:sqlInjectionStrings>
+        <con:sqlInjectionStrings>1/0</con:sqlInjectionStrings>
+        <con:sqlInjectionStrings>'%20o/**/r%201/0%20--</con:sqlInjectionStrings>
+        <con:sqlInjectionStrings>' o/**/r 1/0 --</con:sqlInjectionStrings>
+        <con:sqlInjectionStrings>;</con:sqlInjectionStrings>
+        <con:sqlInjectionStrings>'%20and%201=2%20--</con:sqlInjectionStrings>
+        <con:sqlInjectionStrings>' and 1=2 --</con:sqlInjectionStrings>
+        <con:sqlInjectionStrings>test�%20UNION%20select%201,%20@@version,%201,%201;�</con:sqlInjectionStrings>
+        <con:sqlInjectionStrings>test� UNION select 1, @@version, 1, 1;�</con:sqlInjectionStrings>
+      </con:config>
+      <con:assertion type="Sensitive Information Exposure" id="40a221ab-8290-41c9-b098-2f1612639f98" name="Sensitive Information Exposure">
+        <con:configuration/>
+      </con:assertion>
+      <con:testStep xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+      <con:checkedParameters xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:parameters label="sessionid" parameterName="Request" xpath="declare namespace sam='http://www.soapui.org/sample/'; //sam:logout[1]/sessionid[1]" checked="true"/>
+      </con:checkedParameters>
+      <con:executionStrategy xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:strategy>ONE_BY_ONE</con:strategy>
+        <con:delay>100</con:delay>
+      </con:executionStrategy>
+    </con:testStepSecurityScan>
+    <con:testStepSecurityScan type="XPathInjectionSecurityScan" name="XPath Injection" id="54b79820-8dc2-46d0-b3af-4052eef8462d" applyForFailedStep="false" disabled="false">
+      <con:settings/>
+      <con:config xsi:type="con:XPathInjection" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:xpathList>or name(//users/LoginID[1]) = 'LoginID' or 'a'='b</con:xpathList>
+        <con:xpathList>' or '1'='1</con:xpathList>
+        <con:xpathList>1/0</con:xpathList>
+        <con:xpathList>'%20o/**/r%201/0%20--</con:xpathList>
+        <con:xpathList>' o/**/r 1/0 --</con:xpathList>
+        <con:xpathList>;</con:xpathList>
+        <con:xpathList>'%20and%201=2%20--</con:xpathList>
+        <con:xpathList>' and 1=2 --</con:xpathList>
+        <con:xpathList>test�%20UNION%20select%201,%20@@version,%201,%201;�</con:xpathList>
+        <con:xpathList>test� UNION select 1, @@version, 1, 1;�</con:xpathList>
+      </con:config>
+      <con:assertion type="Sensitive Information Exposure" id="3c8ad636-7a30-4a4a-a24d-0b4efe68650a" name="Sensitive Information Exposure">
+        <con:configuration/>
+      </con:assertion>
+      <con:testStep xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+      <con:checkedParameters xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:parameters label="sessionid" parameterName="Request" xpath="declare namespace sam='http://www.soapui.org/sample/'; //sam:logout[1]/sessionid[1]" checked="true"/>
+      </con:checkedParameters>
+      <con:executionStrategy xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:strategy>ONE_BY_ONE</con:strategy>
+        <con:delay>100</con:delay>
+      </con:executionStrategy>
+    </con:testStepSecurityScan>
+  </con:testStepSecurityTest>
+  <con:properties/>
+  <con:reportParameters/>
+</con:securityTest>

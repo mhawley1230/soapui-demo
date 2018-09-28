@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="buy" path="/buy" id="d2e78192-32e5-44ea-b917-4dccd7c6470b" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="d2e78192-32e5-44ea-b917-4dccd7c6470bfileName">buy</con:setting>
+  </con:settings>
+  <con:parameters>
+    <con:parameter>
+      <con:name>sessionid</con:name>
+      <con:value/>
+      <con:style>QUERY</con:style>
+      <con:default/>
+    </con:parameter>
+    <con:parameter>
+      <con:name>buystring</con:name>
+      <con:value/>
+      <con:style>QUERY</con:style>
+      <con:default/>
+    </con:parameter>
+  </con:parameters>
+  <con:method name="Buy" id="776de6e3-98ad-49a2-9676-be7bfeff03f0" method="GET">
+    <con:settings/>
+    <con:parameters/>
+    <con:request name="Request 1" id="15159f81-8f38-48e1-8e4d-5ca7e66b117c" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>http://localhost:8084</con:endpoint>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters>
+        <entry key="buystring" value="Item 1" xmlns="http://eviware.com/soapui/config"/>
+      </con:parameters>
+      <con:environmentSpec>
+        <con:entry environmentId="3c2b8de8-35c0-4232-b2cf-43bc1f990db1">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="44c57cde-8332-417b-91a4-83155379748b">
+          <con:authProfile>No Authorization</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="2266a20b-93e6-4a8d-a9a0-2fd2b4e82db9">
+          <con:authProfile>No Authorization</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="d3ded574-fc86-4467-998d-cb6f2e2525cc">
+          <con:authProfile>No Authorization</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="b43506b9-1bc1-469f-94ff-9685413847e5">
+          <con:authProfile>No Authorization</con:authProfile>
+        </con:entry>
+      </con:environmentSpec>
+    </con:request>
+    <con:environmentSpec>
+      <con:entry environmentId="3c2b8de8-35c0-4232-b2cf-43bc1f990db1">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+    </con:environmentSpec>
+  </con:method>
+  <con:environmentSpec>
+    <con:entry environmentId="3c2b8de8-35c0-4232-b2cf-43bc1f990db1">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
+</con:resource>

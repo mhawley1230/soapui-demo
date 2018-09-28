@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:mockOperation name="buy" id="9b2d9077-6b96-4627-9844-385c3fbcdf88" interface="SOAP Service" operation="buy" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="9b2d9077-6b96-4627-9844-385c3fbcdf88fileName">buy</con:setting>
+  </con:settings>
+  <con:defaultResponse>invalid request</con:defaultResponse>
+  <con:dispatchStyle>QUERY_MATCH</con:dispatchStyle>
+  <con:dispatchConfig xsi:type="con:MockOperationQueryMatchDispatch" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:query>
+      <con:name>item 2</con:name>
+      <con:query>declare namespace sam='http://www.soapui.org/sample/';
+//sam:buy[1]/buystring[1]</con:query>
+      <con:match>Item 2</con:match>
+      <con:response>Response 2</con:response>
+    </con:query>
+    <con:query>
+      <con:name>item 1</con:name>
+      <con:query>declare namespace sam='http://www.soapui.org/sample/';
+//sam:buy[1]/buystring[1]</con:query>
+      <con:match>Item 1</con:match>
+      <con:response>Response 1</con:response>
+    </con:query>
+  </con:dispatchConfig>
+  <con:dispatchXPath/>
+  <con:routeScript/>
+  <con:response name="Response 1" id="83b1cf6c-998b-45e8-a312-8a1d704234c7" httpResponseStatus="200" encoding="UTF-8" dataSource="">
+    <con:settings/>
+    <con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sam="http://www.soapui.org/sample/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <sam:buyResponse>
+         <sam:buyResponseContent>
+            <!--1 or more repetitions:-->
+            <purchasestatus>
+               <id>1</id>
+               <stockStatus>true</stockStatus>
+               <expectedDelivery>2-3 weeks</expectedDelivery>
+            </purchasestatus>
+         </sam:buyResponseContent>
+      </sam:buyResponse>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:responseContent>
+    <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.soapui.org/sample/buy"/>
+  </con:response>
+  <con:response name="Response 2" id="7f7ee164-4970-4407-9aa4-5c1e31be2ad3" httpResponseStatus="200" encoding="UTF-8" dataSource="">
+    <con:settings/>
+    <con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sam="http://www.soapui.org/sample/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <sam:buyResponse>
+         <sam:buyResponseContent>
+            <!--1 or more repetitions:-->
+            <purchasestatus>
+               <id>2</id>
+               <stockStatus>false</stockStatus>
+               <expectedDelivery>2-4 weeks</expectedDelivery>
+            </purchasestatus>
+         </sam:buyResponseContent>
+      </sam:buyResponse>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:responseContent>
+    <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.soapui.org/sample/buy"/>
+  </con:response>
+  <con:response name="invalid request" id="c000a91e-9509-4256-992d-f3558fb7e79f" httpResponseStatus="200" encoding="UTF-8" dataSource="">
+    <con:settings/>
+    <con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sam="http://www.soapui.org/sample/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <sam:buyResponse>
+         <sam:buyResponseContent>
+            <!--1 or more repetitions:-->
+            <purchasestatus>
+               <id>null</id>
+               <stockStatus>false</stockStatus>
+               <expectedDelivery>null</expectedDelivery>
+            </purchasestatus>
+         </sam:buyResponseContent>
+      </sam:buyResponse>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:responseContent>
+    <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.soapui.org/sample/buy"/>
+  </con:response>
+</con:mockOperation>

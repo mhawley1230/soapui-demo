@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:restMockAction name="login" method="GET" resourcePath="/login" id="82d0d51b-1cc5-4a16-835e-f1da0547efbd" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="82d0d51b-1cc5-4a16-835e-f1da0547efbdfileName">login</con:setting>
+  </con:settings>
+  <con:defaultResponse>Invalid Login Fault</con:defaultResponse>
+  <con:dispatchStyle>PARAMETER</con:dispatchStyle>
+  <con:dispatchConfig/>
+  <con:dispatchPath>//def queryString = mockRequest.getRequest().getQueryString()
+//
+//String[] fields = queryString.split("&amp;");
+//String[] kv;
+//
+//HashMap&lt;String, String> params = new HashMap&lt;String, String>()
+//for (int i = 0; i &lt; fields.length; ++i){
+//    kv = fields[i].split("=");
+//    if (2 == kv.length)
+//     params.put(kv[0], kv[1]); 
+//}
+//
+//def username = params.get("username")
+//def password = params.get("password")
+//def sum = username + password
+//
+//// validate
+////if( sum.length() > 25 || sum.length() &lt; 10 || !username.startsWith("Login") || !password.endsWith( "123" ))
+//// return "Invalid Login Fault"
+////
+////if( context.hasProperty( sum ))
+//// return "Already Logged In Fault"
+//
+//// seems ok
+//def sessionid = String.valueOf( Math.random() ).substring( 2 )
+//
+//context.setProperty( sum, sessionid )
+//context.setProperty( sessionid, sum )
+//
+//requestContext.sessionid = sessionid
+//return "Ok Response"</con:dispatchPath>
+  <con:dispatchXPath/>
+  <con:parameterDispatcherRuleContainer>
+    <con:ParameterDispatcherRule>
+      <con:ruleName>Rule 1</con:ruleName>
+      <con:parameterDispatcherCondition>
+        <con:parameterType>QUERY</con:parameterType>
+        <con:parameterOperationType>EXISTS</con:parameterOperationType>
+        <con:parameterName>username</con:parameterName>
+        <con:parameterValue/>
+      </con:parameterDispatcherCondition>
+      <con:parameterDispatcherCondition>
+        <con:parameterType>QUERY</con:parameterType>
+        <con:parameterOperationType>EXISTS</con:parameterOperationType>
+        <con:parameterName>password</con:parameterName>
+        <con:parameterValue/>
+      </con:parameterDispatcherCondition>
+      <con:responseName>OK Response</con:responseName>
+    </con:ParameterDispatcherRule>
+  </con:parameterDispatcherRuleContainer>
+  <con:routeScript/>
+  <con:response name="OK Response" id="665a289b-2b31-4035-bd3f-19eeabb96c07" httpResponseStatus="200" mediaType="application/json" dataSource="idGenerator">
+    <con:settings/>
+    <con:responseContent>{"sessionid": "${#MockResponse#sessionID}"}</con:responseContent>
+  </con:response>
+  <con:response name="Invalid Login Fault" id="b0ef5d4b-b9a2-41f6-8657-cfd3231988d2" httpResponseStatus="401" mediaType="application/json" dataSource="">
+    <con:settings/>
+    <con:responseContent>{"Invalid Login" : "The login credentials are invalid"}</con:responseContent>
+  </con:response>
+</con:restMockAction>

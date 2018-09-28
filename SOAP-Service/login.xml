@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:operation action="http://www.soapui.org/sample/login" name="login" bindingOperationName="login" inputName="" isOneWay="false" receivesAttachments="false" sendsAttachments="false" type="Request-Response" id="728cfde6-25de-45ec-805a-c4905d874219" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="728cfde6-25de-45ec-805a-c4905d874219fileName">login</con:setting>
+  </con:settings>
+  <con:call name="login rq" outgoingWss="" incomingWss="" id="131c5358-ff43-484a-a0d1-950fa12645dc" defaultOutgoingWss="" defaultIncomingWss="">
+    <con:settings>
+      <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+    </con:settings>
+    <con:encoding>UTF-8</con:encoding>
+    <con:endpoint>http://127.0.0.1:8088/mockServiceSoapBinding</con:endpoint>
+    <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sam="http://www.soapui.org/sample/">
+ <soapenv:Header/>
+ <soapenv:Body>
+ <sam:login>
+ <username>Login</username>
+ <password>Login123</password>
+ </sam:login>
+ </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+    <con:credentials>
+      <con:username xsi:nil="true"/>
+      <con:password xsi:nil="true"/>
+      <con:domain xsi:nil="true"/>
+      <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+      <con:authType>No Authorization</con:authType>
+    </con:credentials>
+    <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+    <con:jmsPropertyConfig/>
+    <con:wsaConfig mustUnderstand="NONE" version="200508"/>
+    <con:wsrmConfig version="1.2"/>
+    <con:environmentSpec>
+      <con:entry environmentId="3c2b8de8-35c0-4232-b2cf-43bc1f990db1">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="44c57cde-8332-417b-91a4-83155379748b">
+        <con:authProfile>No Authorization</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="2266a20b-93e6-4a8d-a9a0-2fd2b4e82db9">
+        <con:authProfile>No Authorization</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="d3ded574-fc86-4467-998d-cb6f2e2525cc">
+        <con:authProfile>No Authorization</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="b43506b9-1bc1-469f-94ff-9685413847e5">
+        <con:authProfile>No Authorization</con:authProfile>
+      </con:entry>
+    </con:environmentSpec>
+  </con:call>
+  <con:environmentSpec>
+    <con:entry environmentId="3c2b8de8-35c0-4232-b2cf-43bc1f990db1">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
+</con:operation>

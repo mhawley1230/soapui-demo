@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testSuite name="REST TestSuite" id="574cf3f6-8e98-48d7-86c8-27a4e2b63ab4" xmlns:con="http://eviware.com/soapui/config">
+  <con:description>This is a sample TestSuite.
+
+It contains a number of TestCases Illustrating a number of principles with SoapUI.
+
+Try each test and read the descriptions.</con:description>
+  <con:settings>
+    <con:setting id="ExportJUnitReportAction@report-directory">C:\dev\testreport</con:setting>
+    <con:setting id="ExportJUnitReportAction@clear-existing">true</con:setting>
+    <con:setting id="ExportJUnitReportAction@format">Frames</con:setting>
+    <con:setting id="CreateReportAction@report-directory">C:\dev\testreport</con:setting>
+    <con:setting id="CreateReportAction@format">Multiple Pages</con:setting>
+    <con:setting id="IncludeOverview">true</con:setting>
+    <con:setting id="IncludeResults">true</con:setting>
+    <con:setting id="FlowLayout">false</con:setting>
+    <con:setting id="ErrorDetails">true</con:setting>
+    <con:setting id="IncludeCoverage">true</con:setting>
+    <con:setting id="ReportTitle">Default Title</con:setting>
+    <con:setting id="574cf3f6-8e98-48d7-86c8-27a4e2b63ab4fileName">REST-TestSuite</con:setting>
+  </con:settings>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:runType>SEQUENTIAL</con:runType>
+  <con:properties/>
+  <con:setupScript/>
+  <con:tearDownScript/>
+  <con:reportScript>import soapui.demo.subreport.SystemPropertiesSubReport
+
+if( !report.hasSubReport( "SystemProperties" ))
+{
+	report.addSubReport( new SystemPropertiesSubReport( testSuite ))
+}</con:reportScript>
+  <con:reportParameters/>
+  <con:environmentSpec>
+    <con:entry environmentId="3c2b8de8-35c0-4232-b2cf-43bc1f990db1">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
+</con:testSuite>
