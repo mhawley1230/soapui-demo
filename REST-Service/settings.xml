@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:interface xsi:type="con:RestService" id="430fc754-4e48-459d-881b-6662274f1b41" wadlVersion="http://wadl.dev.java.net/2009/02" name="REST Service" type="rest" definitionUrl="file:/C:/Users/Michael.Hawley/Documents/ReadyAPI%20Projects/ecommerce-api.wadl" basePath="" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="430fc754-4e48-459d-881b-6662274f1b41fileName">REST-Service</con:setting>
+  </con:settings>
+  <con:definitionCache type="TEXT" rootPart="file:/C:/Users/Michael.Hawley/Documents/ReadyAPI%20Projects/ecommerce-api.wadl">
+    <con:part>
+      <con:url>file:/C:/Users/Michael.Hawley/Documents/ReadyAPI%20Projects/ecommerce-api.wadl</con:url>
+      <con:content><![CDATA[<application xmlns="http://wadl.dev.java.net/2009/02">
+  <doc xml:lang="en" title="REST Service"/>
+  <resources base="http://localhost:8084">
+    <resource path="login" id="Login">
+      <doc xml:lang="en" title="Login"/>
+      <param name="username" type="xs:string" required="false" style="query" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+      <param name="password" type="xs:string" required="false" style="query" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+      <param name="hasAttachment" type="xs:string" required="false" style="query" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+      <method name="GET" id="Login">
+        <doc xml:lang="en" title="Login"/>
+        <request>
+          <param default="Login" name="username" type="xs:string" required="false" style="query" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+          <param default="Login123" name="password" type="xs:string" required="false" style="query" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+          <param default="" name="hasAttachment" type="xs:string" required="false" style="query" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+        </request>
+        <response status="0">
+          <representation mediaType=""/>
+          <representation mediaType=""/>
+          <representation mediaType=""/>
+          <representation mediaType=""/>
+          <representation mediaType=""/>
+          <representation mediaType=""/>
+          <representation mediaType=""/>
+          <representation mediaType=""/>
+          <representation mediaType=""/>
+        </response>
+        <response status="500">
+          <representation mediaType=""/>
+          <representation mediaType=""/>
+          <representation mediaType=""/>
+          <representation mediaType=""/>
+          <representation mediaType=""/>
+          <representation mediaType=""/>
+          <representation mediaType=""/>
+          <representation mediaType=""/>
+          <representation mediaType=""/>
+          <representation mediaType=""/>
+          <representation mediaType=""/>
+          <representation mediaType=""/>
+          <representation mediaType=""/>
+          <representation mediaType=""/>
+          <representation mediaType=""/>
+          <representation mediaType=""/>
+          <representation mediaType=""/>
+        </response>
+        <response status="400 401">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="200">
+          <representation mediaType="application/json"/>
+          <representation mediaType="multipart/form-data"/>
+        </response>
+        <response status="405">
+          <representation mediaType=""/>
+          <representation mediaType=""/>
+          <representation mediaType=""/>
+          <representation mediaType=""/>
+          <representation mediaType=""/>
+        </response>
+        <response status="">
+          <representation mediaType="application/json"/>
+        </response>
+      </method>
+      <method name="POST" id="postTest">
+        <doc xml:lang="en" title="postTest"/>
+        <request>
+          <param name="username" type="xs:string" required="false" style="query" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+          <param name="password" type="xs:string" required="false" style="query" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+          <param name="hasAttachment" type="xs:string" required="false" style="query" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+          <representation mediaType="application/json"/>
+        </request>
+        <response status="400">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="200">
+          <representation mediaType="application/json"/>
+        </response>
+      </method>
+    </resource>
+    <resource path="buy" id="buy">
+      <doc xml:lang="en" title="buy"/>
+      <param name="sessionid" type="xs:string" required="false" style="query" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+      <param name="buystring" type="xs:string" required="false" style="query" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+      <method name="GET" id="Buy">
+        <doc xml:lang="en" title="Buy"/>
+        <request>
+          <param name="sessionid" type="xs:string" required="false" style="query" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+          <param default="Item 1" name="buystring" type="xs:string" required="false" style="query" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+        </request>
+      </method>
+    </resource>
+    <resource path="logout" id="logout">
+      <doc xml:lang="en" title="logout"/>
+      <param name="sessionid" type="xs:string" required="false" style="query" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+      <method name="GET" id="Logout">
+        <doc xml:lang="en" title="Logout"/>
+        <request>
+          <param default="1234" name="sessionid" type="xs:string" required="false" style="query" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+        </request>
+        <response status="500">
+          <representation mediaType=""/>
+          <representation mediaType=""/>
+          <representation mediaType=""/>
+          <representation mediaType=""/>
+        </response>
+        <response status="404">
+          <representation mediaType="application/xml"/>
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="200">
+          <representation mediaType="application/json"/>
+        </response>
+      </method>
+    </resource>
+    <resource path="search" id="search">
+      <doc xml:lang="en" title="search"/>
+      <param name="sessionid" type="xs:string" required="false" style="query" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+      <param name="searchstring" type="xs:string" required="false" style="query" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+      <method name="GET" id="Search">
+        <doc xml:lang="en" title="Search"/>
+        <request>
+          <param name="sessionid" type="xs:string" required="false" style="query" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+          <param default="Item 1" name="searchstring" type="xs:string" required="false" style="query" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+        </request>
+        <response status="200">
+          <representation mediaType="application/xml"/>
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="0">
+          <representation mediaType=""/>
+        </response>
+      </method>
+    </resource>
+  </resources>
+</application>]]></con:content>
+      <con:type>http://wadl.dev.java.net/2009/02</con:type>
+    </con:part>
+  </con:definitionCache>
+  <con:endpoints>
+    <con:endpoint>http://localhost:8084</con:endpoint>
+  </con:endpoints>
+</con:interface>

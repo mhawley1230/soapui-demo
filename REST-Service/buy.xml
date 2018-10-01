@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="buy" path="buy" id="1c5d79c8-eef5-4514-a9c3-88b8a352cad2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="1c5d79c8-eef5-4514-a9c3-88b8a352cad2fileName">buy</con:setting>
+  </con:settings>
+  <con:parameters>
+    <con:parameter>
+      <con:name>sessionid</con:name>
+      <con:value xsi:nil="true"/>
+      <con:style>QUERY</con:style>
+      <con:default xsi:nil="true"/>
+    </con:parameter>
+    <con:parameter>
+      <con:name>buystring</con:name>
+      <con:value xsi:nil="true"/>
+      <con:style>QUERY</con:style>
+      <con:default xsi:nil="true"/>
+    </con:parameter>
+  </con:parameters>
+  <con:method name="Buy" id="bf69601c-d7f7-4a09-bf39-18ff9ce3e12d" method="GET">
+    <con:settings/>
+    <con:parameters/>
+    <con:request name="Request 1" id="c4e1391a-3718-474b-95ed-f4fb8a44dadb" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>http://localhost:8084</con:endpoint>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

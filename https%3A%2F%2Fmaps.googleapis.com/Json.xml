@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="Json" path="/maps/api/geocode/json" id="2f5140b2-364c-4248-a229-f9a1401fe8ec" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="2f5140b2-364c-4248-a229-f9a1401fe8ecfileName">Json</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="Json" id="1dd92f1a-6859-486d-8fb7-259e70e18eb9" method="GET">
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>address</con:name>
+        <con:value>Boston</con:value>
+        <con:style>QUERY</con:style>
+        <con:default>Boston</con:default>
+        <con:path xsi:nil="true"/>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+      <con:parameter required="true">
+        <con:name>key</con:name>
+        <con:value>AIzaSyAVfp_fn34kZm4q2aWKyInuwL3Z0j12Lnw</con:value>
+        <con:style>QUERY</con:style>
+        <con:default>AIzaSyAVfp_fn34kZm4q2aWKyInuwL3Z0j12Lnw</con:default>
+        <con:path xsi:nil="true"/>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json; charset=UTF-8</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:element xmlns:json="https://maps.googleapis.com/maps/api/geocode/json">json:Response</con:element>
+    </con:representation>
+    <con:request name="Request 1" id="e674b5bb-904d-4ff9-b2dc-bfd4558f2def" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://maps.googleapis.com</con:endpoint>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="address" value="Boston"/>
+        <con:entry key="key" value="AIzaSyAVfp_fn34kZm4q2aWKyInuwL3Z0j12Lnw"/>
+      </con:parameters>
+      <con:parameterOrder>
+        <con:entry>address</con:entry>
+        <con:entry>key</con:entry>
+      </con:parameterOrder>
+    </con:request>
+  </con:method>
+</con:resource>

@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="c69b7d07-0226-427c-ada4-99b5208b48f6" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="Project 2 TestCase 1" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="IncludeOverview">true</con:setting>
+    <con:setting id="IncludeResults">true</con:setting>
+    <con:setting id="FlowLayout">true</con:setting>
+    <con:setting id="ErrorDetails">true</con:setting>
+    <con:setting id="IncludeCoverage">true</con:setting>
+    <con:setting id="c69b7d07-0226-427c-ada4-99b5208b48f6fileName">Project-2-TestCase-1</con:setting>
+  </con:settings>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:testStep type="datasource" name="DataSource" id="e5cf9e41-169c-40ee-9a05-64b2316af349">
+    <con:settings>
+      <con:setting id="com.eviware.soapui.impl.wsdl.teststeps.datasource.DataSourceContainer@prepared-properties">&lt;xml-fragment/></con:setting>
+    </con:settings>
+    <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:dataSource type="Excel">
+        <con:configuration>
+          <file>C:/Users/Michael.Hawley/Downloads/items.xlsx</file>
+          <worksheet/>
+          <cell>A2</cell>
+          <ignoreEmpty>false</ignoreEmpty>
+          <evaluateFormulas>false</evaluateFormulas>
+        </con:configuration>
+      </con:dataSource>
+      <con:shared>true</con:shared>
+      <con:restartShared>true</con:restartShared>
+      <con:property>Item ID</con:property>
+      <con:property>Price</con:property>
+      <con:property>Description</con:property>
+      <con:completeLastOperation>true</con:completeLastOperation>
+      <con:restartOnRun>true</con:restartOnRun>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="Login GET Request 1" id="a1436d2c-8c0a-4749-9280-0821f637d8e8">
+    <con:settings/>
+    <con:config service="REST Service" resourcePath="/login" methodName="Login" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="Login GET Request 1" id="f4ff5a35-f5c4-4db5-b38a-f17512e68df5" mediaType="application/json">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>http://localhost:8084</con:endpoint>
+        <con:request/>
+        <con:originalUri>http://localhost/login</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="61be99c8-1175-4ce8-a250-ab05901206cc" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Schema Compliance" id="619cf2e5-5ec6-4730-b552-cec88a8d7691" name="Schema Compliance">
+          <con:configuration/>
+        </con:assertion>
+        <con:assertion type="Response SLA Assertion" id="d1ab96e4-6a26-4da3-a525-45f27dab644c" name="Response SLA">
+          <con:configuration>
+            <SLA>300</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Existence Match" id="585a2ebb-8ee0-4870-a458-dff931e47e29" name="Check for existence of [sessionid]">
+          <con:configuration>
+            <path>$['sessionid']</path>
+            <content>true</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="password" value="login123"/>
+          <con:entry key="username" value="login"/>
+        </con:parameters>
+        <con:parameterOrder>
+          <con:entry>username</con:entry>
+          <con:entry>password</con:entry>
+          <con:entry>hasAttachment</con:entry>
+          <con:entry>key</con:entry>
+        </con:parameterOrder>
+        <con:environmentSpec>
+          <con:entry environmentId="3723c7c5-8d19-4149-a45d-3e826bc93a69">
+            <con:authProfile>No Authorization</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="search GET Request 1" id="381cdffe-7038-42f2-91f7-c9a8bf4056fb">
+    <con:settings/>
+    <con:config service="REST Service" resourcePath="/search" methodName="Search" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="search GET Request 1" id="aca4989a-a23e-47e9-b489-df60ce3ca596" mediaType="application/json">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>http://localhost:8084</con:endpoint>
+        <con:request/>
+        <con:originalUri>http://localhost/search</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="ded91c21-dcf1-4d13-aae3-b18830e35244" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Schema Compliance" id="70bd0e31-00ba-493a-b20e-fa0cd7b9bf9c" name="Schema Compliance">
+          <con:configuration/>
+        </con:assertion>
+        <con:assertion type="Response SLA Assertion" id="c11b8755-de1e-4505-8d08-f10e8e1d37cb" name="Response SLA">
+          <con:configuration>
+            <SLA>300</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Match" id="070112ee-1fa6-434f-865d-2a90093360d2" name="Match content of [price]">
+          <con:configuration>
+            <path>$['result']['item']['price']</path>
+            <content>${DataSource#Price}</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <entry key="searchstring" value="${DataSource#Item ID}" xmlns="http://eviware.com/soapui/config"/>
+        </con:parameters>
+        <con:environmentSpec>
+          <con:entry environmentId="3723c7c5-8d19-4149-a45d-3e826bc93a69">
+            <con:authProfile>No Authorization</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="buy GET Request 1" id="4c36bd92-7cfe-42fe-a558-e2b7618ae73c">
+    <con:settings/>
+    <con:config service="REST Service" resourcePath="/buy" methodName="Buy" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="buy GET Request 1" id="c4e1391a-3718-474b-95ed-f4fb8a44dadb" mediaType="application/json">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>http://localhost:8084</con:endpoint>
+        <con:request/>
+        <con:originalUri>http://localhost/buy</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="3cd15244-2a2e-4031-8c5a-6a03e87c0e3c" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Schema Compliance" id="a00e9749-3643-4688-9f0e-01a3972d15fc" name="Schema Compliance">
+          <con:configuration/>
+        </con:assertion>
+        <con:assertion type="Response SLA Assertion" id="c541d4d8-8f62-4b38-b8b1-4ddc67cd728c" name="Response SLA">
+          <con:configuration>
+            <SLA>300</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="buystring" value="${DataSource#Item ID}"/>
+          <con:entry key="sessionid" value="${Login GET Request 1#Response#$['sessionid']}"/>
+        </con:parameters>
+        <con:environmentSpec>
+          <con:entry environmentId="3723c7c5-8d19-4149-a45d-3e826bc93a69">
+            <con:authProfile>No Authorization</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="logout GET Request 1" id="27fa7a15-c62e-4437-86d4-bf67be18f8c3">
+    <con:settings/>
+    <con:config service="REST Service" resourcePath="/logout" methodName="Logout" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="logout GET Request 1" id="da41711f-08f4-4acc-b001-13e94e42d29a" mediaType="application/json">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>http://localhost:8084</con:endpoint>
+        <con:request/>
+        <con:originalUri>http://localhost/logout</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="1502a514-3ec6-4d7f-a465-70641060e478" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Schema Compliance" id="87466a52-afdb-4f22-87b0-0cef11a119c9" name="Schema Compliance">
+          <con:configuration/>
+        </con:assertion>
+        <con:assertion type="Response SLA Assertion" id="6abbd6f9-da20-45de-98f8-51c204593001" name="Response SLA">
+          <con:configuration>
+            <SLA>300</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <entry key="sessionid" value="${Login GET Request 1#Response#$['sessionid']}" xmlns="http://eviware.com/soapui/config"/>
+        </con:parameters>
+        <con:environmentSpec>
+          <con:entry environmentId="3723c7c5-8d19-4149-a45d-3e826bc93a69">
+            <con:authProfile>No Authorization</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="datasourceloop" name="DataSource Loop" id="4a1910f7-d039-4f86-9b08-441fe0510817">
+    <con:settings/>
+    <con:config>
+      <dataSourceStep>DataSource</dataSourceStep>
+      <targetStep>Login GET Request 1</targetStep>
+      <discardResults>true</discardResults>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+  <con:breakPoints>
+    <con:testStepId>27fa7a15-c62e-4437-86d4-bf67be18f8c3</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>381cdffe-7038-42f2-91f7-c9a8bf4056fb</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>e5cf9e41-169c-40ee-9a05-64b2316af349</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>4a1910f7-d039-4f86-9b08-441fe0510817</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+</con:testCase>
