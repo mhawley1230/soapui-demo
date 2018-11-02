@@ -11,7 +11,7 @@
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
-        <con:endpoint>https://maps.googleapis.com</con:endpoint>
+        <con:endpoint>http://localhost:8081</con:endpoint>
         <con:request/>
         <con:originalUri>https://maps.googleapis.com/maps/api/geocode/json</con:originalUri>
         <con:assertion type="Valid HTTP Status Codes" id="1816cc7c-3ecd-4d39-acd2-cebe3d1cf776" name="Valid HTTP Status Codes">
@@ -25,14 +25,113 @@
             <SLA>200</SLA>
           </con:configuration>
         </con:assertion>
+        <con:assertion type="MessageContentAssertion" id="cff5e427-d249-4576-8970-722edf01839a" name="Message Content Assertion">
+          <con:configuration xsi:type="con:MessageContentAssertion">
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://maps.googleapis.com/maps/api/geocode/json';
+//ns1:Response[1]/ns1:results[1]/ns1:e[1]/ns1:address_components[1]/ns1:e[1]/ns1:long_name[1]</con:xpath>
+              <con:element>long_name</con:element>
+              <con:type xsi:nil="true"/>
+              <con:operator>=</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue>Boston</con:expectedValue>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://maps.googleapis.com/maps/api/geocode/json';
+//ns1:Response[1]/ns1:results[1]/ns1:e[1]/ns1:address_components[1]/ns1:e[2]/ns1:long_name[1]</con:xpath>
+              <con:element>long_name</con:element>
+              <con:type xsi:nil="true"/>
+              <con:operator>=</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue>Suffolk County</con:expectedValue>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:originalMessage><![CDATA[<Response xmlns="https://maps.googleapis.com/maps/api/geocode/json">
+   <results>
+      <e>
+         <address_components>
+            <e>
+               <long_name>Boston</long_name>
+               <short_name>Boston</short_name>
+               <types>
+                  <e>locality</e>
+                  <e>political</e>
+               </types>
+            </e>
+            <e>
+               <long_name>Suffolk County</long_name>
+               <short_name>Suffolk County</short_name>
+               <types>
+                  <e>administrative_area_level_2</e>
+                  <e>political</e>
+               </types>
+            </e>
+            <e>
+               <long_name>Massachusetts</long_name>
+               <short_name>MA</short_name>
+               <types>
+                  <e>administrative_area_level_1</e>
+                  <e>political</e>
+               </types>
+            </e>
+            <e>
+               <long_name>United States</long_name>
+               <short_name>US</short_name>
+               <types>
+                  <e>country</e>
+                  <e>political</e>
+               </types>
+            </e>
+         </address_components>
+         <formatted_address>Boston, MA, USA</formatted_address>
+         <geometry>
+            <bounds>
+               <northeast>
+                  <lat>42.40081989999999</lat>
+                  <lng>-70.749455</lng>
+               </northeast>
+               <southwest>
+                  <lat>42.22788</lat>
+                  <lng>-71.191113</lng>
+               </southwest>
+            </bounds>
+            <location>
+               <lat>42.3600825</lat>
+               <lng>-71.0588801</lng>
+            </location>
+            <location_type>APPROXIMATE</location_type>
+            <viewport>
+               <northeast>
+                  <lat>42.40081989999999</lat>
+                  <lng>-70.749455</lng>
+               </northeast>
+               <southwest>
+                  <lat>42.22788</lat>
+                  <lng>-71.191113</lng>
+               </southwest>
+            </viewport>
+         </geometry>
+         <place_id>ChIJGzE9DS1l44kRoOhiASS_fHg</place_id>
+         <types>
+            <e>locality</e>
+            <e>political</e>
+         </types>
+      </e>
+   </results>
+   <status>OK</status>
+</Response>]]></con:originalMessage>
+          </con:configuration>
+        </con:assertion>
         <con:credentials>
           <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
           <con:authType>No Authorization</con:authType>
         </con:credentials>
         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
         <con:parameters>
-          <con:entry key="address" value="Boston"/>
-          <con:entry key="key" value="AIzaSyAVfp_fn34kZm4q2aWKyInuwL3Z0j12Lnw"/>
+          <entry key="address" value="Austin" xmlns="http://eviware.com/soapui/config"/>
         </con:parameters>
         <con:parameterOrder>
           <con:entry>address</con:entry>

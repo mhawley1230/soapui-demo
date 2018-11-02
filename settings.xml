@@ -8,9 +8,18 @@
     <con:repositoryIdentifier>https://github.com/mhawley1230/soapui-demo.git</con:repositoryIdentifier>
   </con:vcsConfiguration>
   <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:requirements/>
   <con:properties/>
   <con:wssContainer/>
-  <con:databaseConnectionContainer/>
+  <con:databaseConnectionContainer>
+    <con:databaseConnection>
+      <con:name>psql</con:name>
+      <con:driver>org.postgresql.Driver</con:driver>
+      <con:connectionString>jdbc:postgresql://127.0.0.1:5432/postgres?user=postgres&amp;password=PASS_VALUE</con:connectionString>
+      <con:password>Landof0oo!</con:password>
+      <con:connectionProperties/>
+    </con:databaseConnection>
+  </con:databaseConnectionContainer>
   <con:jmsConnectionContainer/>
   <con:oAuth2ProfileContainer/>
   <con:oAuth1ProfileContainer/>
