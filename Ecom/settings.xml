@@ -14,4 +14,9 @@
   <con:endpoints>
     <con:endpoint>https://virtserver.swaggerhub.com</con:endpoint>
   </con:endpoints>
+  <con:environmentSpec>
+    <con:entry environmentId="673fa818-56dd-4039-a3eb-d66c76e7f936">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
 </con:interface>

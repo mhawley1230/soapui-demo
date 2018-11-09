@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:securityTest id="ae8c546e-0720-4665-9585-6c2bfb494e64" testCaseId="eb7bc69d-33da-49ae-ba87-2bc8f455e75d" name="SecurityTest 1" failSecurityTestOnScanErrors="true" xmlns:con="http://eviware.com/soapui/config">
+<con:securityTest id="b4092623-bb94-4f8e-8ce1-ce45ba26cee5" testCaseId="eb7bc69d-33da-49ae-ba87-2bc8f455e75d" name="SecurityTest 1" failSecurityTestOnScanErrors="true" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
-    <con:setting id="ae8c546e-0720-4665-9585-6c2bfb494e64fileName">SecurityTest-1</con:setting>
+    <con:setting id="b4092623-bb94-4f8e-8ce1-ce45ba26cee5fileName">SecurityTest-1</con:setting>
   </con:settings>
   <con:testStepSecurityTest>
     <con:testStepId>3f9aa4d2-8b44-48b7-b7b3-afb570982d8d</con:testStepId>
-    <con:testStepSecurityScan type="SQLInjectionScan" name="SQL Injection" id="ae4eb75f-91bd-46e4-9bee-90dd95798032" applyForFailedStep="false" disabled="false">
+    <con:testStepSecurityScan type="SQLInjectionScan" name="SQL Injection" id="371745de-4314-42a4-b2a6-7f5898975ceb" applyForFailedStep="false" disabled="false">
       <con:settings/>
       <con:config xsi:type="con:SQLInjectionScan" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         <con:sqlInjectionStrings>' or '1'='1</con:sqlInjectionStrings>
@@ -36,7 +36,7 @@
         <con:delay>100</con:delay>
       </con:executionStrategy>
     </con:testStepSecurityScan>
-    <con:testStepSecurityScan type="XPathInjectionSecurityScan" name="XPath Injection" id="fb898a15-d671-4f5c-90d2-9369fbf18e5f" applyForFailedStep="false" disabled="false">
+    <con:testStepSecurityScan type="XPathInjectionSecurityScan" name="XPath Injection" id="801b1587-650a-45de-b014-d55837e9f447" applyForFailedStep="false" disabled="false">
       <con:settings/>
       <con:config xsi:type="con:XPathInjection" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         <con:xpathList>or name(//users/LoginID[1]) = 'LoginID' or 'a'='b</con:xpathList>
@@ -66,7 +66,7 @@
   </con:testStepSecurityTest>
   <con:testStepSecurityTest>
     <con:testStepId>4cbe3914-614d-44b2-be0b-5a1224eb6a02</con:testStepId>
-    <con:testStepSecurityScan type="SQLInjectionScan" name="SQL Injection" id="f2e7b366-1c18-44ef-bba0-32be2016a229" applyForFailedStep="false" disabled="false">
+    <con:testStepSecurityScan type="SQLInjectionScan" name="SQL Injection" id="b0d7cdd7-bda1-4959-bc20-c3f544cd6829" applyForFailedStep="false" disabled="false">
       <con:settings/>
       <con:config xsi:type="con:SQLInjectionScan" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         <con:sqlInjectionStrings>' or '1'='1</con:sqlInjectionStrings>
@@ -97,7 +97,7 @@
         <con:delay>100</con:delay>
       </con:executionStrategy>
     </con:testStepSecurityScan>
-    <con:testStepSecurityScan type="XPathInjectionSecurityScan" name="XPath Injection" id="4f3fc9df-587e-4f77-9f69-b70818c70434" applyForFailedStep="false" disabled="false">
+    <con:testStepSecurityScan type="XPathInjectionSecurityScan" name="XPath Injection" id="0e09031b-55bf-41ab-8a40-caaac6f4aea1" applyForFailedStep="false" disabled="false">
       <con:settings/>
       <con:config xsi:type="con:XPathInjection" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         <con:xpathList>or name(//users/LoginID[1]) = 'LoginID' or 'a'='b</con:xpathList>
@@ -127,7 +127,7 @@
   </con:testStepSecurityTest>
   <con:testStepSecurityTest>
     <con:testStepId>b2e3ef70-0e21-4c2a-837e-d88c98090928</con:testStepId>
-    <con:testStepSecurityScan type="SQLInjectionScan" name="SQL Injection" id="a0686101-2a89-40cc-b3ec-791727b06153" applyForFailedStep="false" disabled="false">
+    <con:testStepSecurityScan type="SQLInjectionScan" name="SQL Injection" id="72c3ffa2-46cc-46ff-8640-86fc0632c088" applyForFailedStep="false" disabled="false">
       <con:settings/>
       <con:config xsi:type="con:SQLInjectionScan" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         <con:sqlInjectionStrings>' or '1'='1</con:sqlInjectionStrings>
@@ -157,7 +157,7 @@
         <con:delay>100</con:delay>
       </con:executionStrategy>
     </con:testStepSecurityScan>
-    <con:testStepSecurityScan type="XPathInjectionSecurityScan" name="XPath Injection" id="6a691859-2566-49f9-874e-f36d382fe242" applyForFailedStep="false" disabled="false">
+    <con:testStepSecurityScan type="XPathInjectionSecurityScan" name="XPath Injection" id="d2c74ca5-4fe1-49f5-8094-bd2319bd21d3" applyForFailedStep="false" disabled="false">
       <con:settings/>
       <con:config xsi:type="con:XPathInjection" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         <con:xpathList>or name(//users/LoginID[1]) = 'LoginID' or 'a'='b</con:xpathList>

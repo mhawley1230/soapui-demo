@@ -9,10 +9,30 @@
       <con:setting id="com.eviware.soapui.impl.wsdl.teststeps.datasource.DataSourceContainer@prepared-properties">&lt;xml-fragment/></con:setting>
     </con:settings>
     <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:dataSource type="Grid">
+      <con:dataSource type="Data Generator">
         <con:configuration>
-          <check>&lt;xml-fragment/></check>
-          <recognizeAsPlainText>true</recognizeAsPlainText>
+          <generatedDataCount>10</generatedDataCount>
+          <generatorsTotalNumber>3</generatorsTotalNumber>
+          <lastSelectedProperty>1</lastSelectedProperty>
+          <GeneratorType0>EMAIL</GeneratorType0>
+          <PropertyName0>id</PropertyName0>
+          <repetitionCountid>0</repetitionCountid>
+          <repeatValuesid>false</repeatValuesid>
+          <GeneratorType1>GUID</GeneratorType1>
+          <PropertyName1>password</PropertyName1>
+          <repetitionCountpassword>0</repetitionCountpassword>
+          <repeatValuespassword>false</repeatValuespassword>
+          <GeneratorType2>STR</GeneratorType2>
+          <PropertyName2>email</PropertyName2>
+          <repetitionCountemail>0</repetitionCountemail>
+          <repeatValuesemail>false</repeatValuesemail>
+          <PasswordDataGeneratorUseSpacesemail>false</PasswordDataGeneratorUseSpacesemail>
+          <PasswordDataGeneratorUsePunctuationMarksemail>false</PasswordDataGeneratorUsePunctuationMarksemail>
+          <PasswordDataGeneratorUseLettersemail>true</PasswordDataGeneratorUseLettersemail>
+          <PasswordDataGeneratorUseDigitsemail>true</PasswordDataGeneratorUseDigitsemail>
+          <PasswordDataGeneratorMaxCharacterCountemail>20</PasswordDataGeneratorMaxCharacterCountemail>
+          <PasswordDataGeneratorMinCharacterCountemail>20</PasswordDataGeneratorMinCharacterCountemail>
+          <escapeSpaceSequence/>
         </con:configuration>
       </con:dataSource>
       <con:shared>true</con:shared>
@@ -55,66 +75,17 @@
             <ignoreComments>false</ignoreComments>
           </con:configuration>
         </con:assertion>
-        <con:assertion type="MessageContentAssertion" id="af7ee6a4-3219-415d-8a76-e39424e82538" name="Message Content Assertion">
-          <con:configuration xsi:type="con:MessageContentAssertion">
-            <con:elements>
-              <con:xpath>declare namespace ns1='http://localhost/login';
-//ns1:Response[1]/ns1:sessionid[1]</con:xpath>
-              <con:element>sessionid</con:element>
-              <con:type xsi:nil="true"/>
-              <con:operator>=</con:operator>
-              <con:enabled>true</con:enabled>
-              <con:expectedValue>67652967</con:expectedValue>
-              <con:hasValue>false</con:hasValue>
-              <con:numberType>false</con:numberType>
-            </con:elements>
-            <con:elements>
-              <con:xpath>declare namespace ns1='http://localhost/login';
-//ns1:Response[1]</con:xpath>
-              <con:element>Response</con:element>
-              <con:type xsi:nil="true"/>
-              <con:operator>=</con:operator>
-              <con:enabled>true</con:enabled>
-              <con:expectedValue/>
-              <con:hasValue>false</con:hasValue>
-              <con:numberType>false</con:numberType>
-            </con:elements>
-            <con:originalMessage>&lt;Response xmlns="http://localhost/login">
-   &lt;sessionid>67652967&lt;/sessionid>
-&lt;/Response></con:originalMessage>
-          </con:configuration>
-        </con:assertion>
-        <con:assertion type="MessageContentAssertion" name="Copy of Message Content Assertion" id="346d82f0-8714-4321-a17c-48013f528ab6">
-          <con:configuration xsi:type="con:MessageContentAssertion">
-            <con:elements>
-              <con:xpath>declare namespace ns1='http://localhost/login';
-//ns1:Response[1]/ns1:sessionid[1]</con:xpath>
-              <con:element>sessionid</con:element>
-              <con:type xsi:nil="true"/>
-              <con:operator>=</con:operator>
-              <con:enabled>true</con:enabled>
-              <con:expectedValue>67652967</con:expectedValue>
-              <con:hasValue>false</con:hasValue>
-              <con:numberType>false</con:numberType>
-            </con:elements>
-            <con:elements>
-              <con:xpath>declare namespace ns1='http://localhost/login';
-//ns1:Response[1]</con:xpath>
-              <con:element>Response</con:element>
-              <con:type xsi:nil="true"/>
-              <con:operator>=</con:operator>
-              <con:enabled>true</con:enabled>
-              <con:expectedValue/>
-              <con:hasValue>false</con:hasValue>
-              <con:numberType>false</con:numberType>
-            </con:elements>
-            <con:originalMessage>&lt;Response xmlns="http://localhost/login">
-   &lt;sessionid>67652967&lt;/sessionid>
-&lt;/Response></con:originalMessage>
+        <con:assertion type="JsonPath Existence Match" id="502b624c-3da3-407d-8f2f-c056c7e1ec63" name="Check for existence of [sessionid]">
+          <con:configuration>
+            <path>$['sessionid']</path>
+            <content>true</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
           </con:configuration>
         </con:assertion>
         <con:credentials>
-          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
           <con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes>
           <con:authType>No Authorization</con:authType>
         </con:credentials>
@@ -122,13 +93,15 @@
         <con:jmsPropertyConfig/>
         <con:parameters>
           <con:entry key="password" value="${randomLoginGenerator#password}"/>
-          <con:entry key="hasAttachment" value=""/>
+          <con:entry key="hasAttachment" value="${#TestCase#timestamp}"/>
+          <con:entry key="format" value=""/>
           <con:entry key="username" value="${randomLoginGenerator#email}"/>
         </con:parameters>
         <con:parameterOrder>
           <con:entry>username</con:entry>
           <con:entry>password</con:entry>
           <con:entry>hasAttachment</con:entry>
+          <con:entry>format</con:entry>
         </con:parameterOrder>
         <con:environmentSpec>
           <con:entry environmentId="3c2b8de8-35c0-4232-b2cf-43bc1f990db1">
@@ -145,6 +118,15 @@
           </con:entry>
           <con:entry environmentId="b43506b9-1bc1-469f-94ff-9685413847e5">
             <con:authProfile>No Authorization</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="673fa818-56dd-4039-a3eb-d66c76e7f936">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="2b509f92-41a3-4d47-928c-85a4a2a8c75f">
+            <con:authProfile>No Authorization</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="968e6531-b961-4a11-9754-24597a221535">
+            <con:authProfile>Inherit From Parent</con:authProfile>
           </con:entry>
         </con:environmentSpec>
       </con:restRequest>
@@ -207,8 +189,17 @@
             <ignoreComments>false</ignoreComments>
           </con:configuration>
         </con:assertion>
+        <con:assertion type="JsonPath Match" id="45649f42-52ef-432c-a63e-4864315b4049" name="Match content of [id]">
+          <con:configuration>
+            <path>$['result']['item']['id']</path>
+            <content>Item ${randomSearchGen#randomNum}</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
         <con:credentials>
-          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
           <con:authType>No Authorization</con:authType>
         </con:credentials>
         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
@@ -236,6 +227,15 @@
           </con:entry>
           <con:entry environmentId="b43506b9-1bc1-469f-94ff-9685413847e5">
             <con:authProfile>No Authorization</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="673fa818-56dd-4039-a3eb-d66c76e7f936">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="2b509f92-41a3-4d47-928c-85a4a2a8c75f">
+            <con:authProfile>No Authorization</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="968e6531-b961-4a11-9754-24597a221535">
+            <con:authProfile>Inherit From Parent</con:authProfile>
           </con:entry>
         </con:environmentSpec>
       </con:restRequest>
@@ -276,7 +276,7 @@
           </con:configuration>
         </con:assertion>
         <con:credentials>
-          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
           <con:authType>No Authorization</con:authType>
         </con:credentials>
         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
@@ -304,6 +304,15 @@
           </con:entry>
           <con:entry environmentId="b43506b9-1bc1-469f-94ff-9685413847e5">
             <con:authProfile>No Authorization</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="673fa818-56dd-4039-a3eb-d66c76e7f936">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="2b509f92-41a3-4d47-928c-85a4a2a8c75f">
+            <con:authProfile>No Authorization</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="968e6531-b961-4a11-9754-24597a221535">
+            <con:authProfile>Inherit From Parent</con:authProfile>
           </con:entry>
         </con:environmentSpec>
       </con:restRequest>
@@ -335,7 +344,7 @@
           </con:configuration>
         </con:assertion>
         <con:credentials>
-          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
           <con:authType>No Authorization</con:authType>
         </con:credentials>
         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
@@ -362,16 +371,17 @@
           <con:entry environmentId="b43506b9-1bc1-469f-94ff-9685413847e5">
             <con:authProfile>No Authorization</con:authProfile>
           </con:entry>
+          <con:entry environmentId="673fa818-56dd-4039-a3eb-d66c76e7f936">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="2b509f92-41a3-4d47-928c-85a4a2a8c75f">
+            <con:authProfile>No Authorization</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="968e6531-b961-4a11-9754-24597a221535">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
         </con:environmentSpec>
       </con:restRequest>
-    </con:config>
-  </con:testStep>
-  <con:testStep type="groovy" name="Groovy Script" id="0db3e74a-a14f-4628-b3ad-1ed2cbb328c6" disabled="true">
-    <con:settings/>
-    <con:config>
-      <script>for (r in testRunner.results) {
-	log.info r.testStep.name + ": " +  r.status
-}</script>
     </con:config>
   </con:testStep>
   <con:testStep type="datasourceloop" name="DataSource Loop" id="f65eab94-8fe4-40b7-a3e4-af37b6191abb">
@@ -381,7 +391,12 @@
       <targetStep>Login</targetStep>
     </con:config>
   </con:testStep>
-  <con:properties/>
+  <con:properties>
+    <con:property>
+      <con:name>timestamp</con:name>
+      <con:value>${= new Date().format( "yyyyMMdd" ) }</con:value>
+    </con:property>
+  </con:properties>
   <con:reportParameters/>
   <con:breakPoints>
     <con:testStepId>24acf13c-6c5e-4a40-8d8d-9c408a791eb7</con:testStepId>
@@ -418,13 +433,11 @@
     <con:status>NONE</con:status>
     <con:properties/>
   </con:breakPoints>
-  <con:breakPoints>
-    <con:testStepId>0db3e74a-a14f-4628-b3ad-1ed2cbb328c6</con:testStepId>
-    <con:status>NONE</con:status>
-    <con:properties/>
-  </con:breakPoints>
   <con:environmentSpec>
     <con:entry environmentId="3c2b8de8-35c0-4232-b2cf-43bc1f990db1">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+    <con:entry environmentId="673fa818-56dd-4039-a3eb-d66c76e7f936">
       <con:authProfile>Inherit From Parent</con:authProfile>
     </con:entry>
   </con:environmentSpec>

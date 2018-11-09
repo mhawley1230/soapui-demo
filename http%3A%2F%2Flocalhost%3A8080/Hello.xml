@@ -35,7 +35,7 @@
       <con:request/>
       <con:originalUri>http://localhost/hello</con:originalUri>
       <con:credentials>
-        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
         <con:authType>No Authorization</con:authType>
       </con:credentials>
       <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
@@ -49,7 +49,26 @@
         <con:entry environmentId="b43506b9-1bc1-469f-94ff-9685413847e5">
           <con:authProfile>No Authorization</con:authProfile>
         </con:entry>
+        <con:entry environmentId="673fa818-56dd-4039-a3eb-d66c76e7f936">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="2b509f92-41a3-4d47-928c-85a4a2a8c75f">
+          <con:authProfile>No Authorization</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="968e6531-b961-4a11-9754-24597a221535">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
       </con:environmentSpec>
     </con:request>
+    <con:environmentSpec>
+      <con:entry environmentId="673fa818-56dd-4039-a3eb-d66c76e7f936">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+    </con:environmentSpec>
   </con:method>
+  <con:environmentSpec>
+    <con:entry environmentId="673fa818-56dd-4039-a3eb-d66c76e7f936">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
 </con:resource>

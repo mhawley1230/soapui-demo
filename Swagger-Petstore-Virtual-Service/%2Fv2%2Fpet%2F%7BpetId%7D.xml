@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:restMockAction name="/v2/pet/{petId}" method="GET" resourcePath="/v2/pet/{petId}" id="3c649d6d-0e0b-46e0-b1c5-7892b740a95b" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="3c649d6d-0e0b-46e0-b1c5-7892b740a95bfileName">%2Fv2%2Fpet%2F%7BpetId%7D</con:setting>
+  </con:settings>
+  <con:defaultResponse>404</con:defaultResponse>
+  <con:dispatchStyle>PARAMETER</con:dispatchStyle>
+  <con:dispatchConfig/>
+  <con:dispatchXPath/>
+  <con:parameterDispatcherRuleContainer>
+    <con:ParameterDispatcherRule>
+      <con:ruleName>Rule 1</con:ruleName>
+      <con:parameterDispatcherCondition>
+        <con:parameterType>PATH</con:parameterType>
+        <con:parameterOperationType>EQUALS</con:parameterOperationType>
+        <con:parameterName>petId</con:parameterName>
+        <con:parameterValue>1</con:parameterValue>
+      </con:parameterDispatcherCondition>
+      <con:responseName>id=1</con:responseName>
+    </con:ParameterDispatcherRule>
+    <con:ParameterDispatcherRule>
+      <con:ruleName>Rule 2</con:ruleName>
+      <con:parameterDispatcherCondition>
+        <con:parameterType>PATH</con:parameterType>
+        <con:parameterOperationType>EQUALS</con:parameterOperationType>
+        <con:parameterName>petId</con:parameterName>
+        <con:parameterValue>2</con:parameterValue>
+      </con:parameterDispatcherCondition>
+      <con:responseName>id=2</con:responseName>
+    </con:ParameterDispatcherRule>
+    <con:ParameterDispatcherRule>
+      <con:ruleName>Rule 3</con:ruleName>
+      <con:parameterDispatcherCondition>
+        <con:parameterType>PATH</con:parameterType>
+        <con:parameterOperationType>EQUALS</con:parameterOperationType>
+        <con:parameterName>petId</con:parameterName>
+        <con:parameterValue>3</con:parameterValue>
+      </con:parameterDispatcherCondition>
+      <con:responseName>id=3</con:responseName>
+    </con:ParameterDispatcherRule>
+  </con:parameterDispatcherRuleContainer>
+  <con:routeScript/>
+  <con:response name="id=1" id="33957b6a-31db-4436-9314-7ae77947f129" httpResponseStatus="200" mediaType="application/json" compressedBodyContent="aced00057372002f636f6d2e657669776172652e736f617075692e696d706c2e737570706f72742e436f6d7072657373656456616c7565000b8b02c748eeab0200025a000a636f6d707265737365645b0004646174617400025b4278700070" dataSource="">
+    <con:settings/>
+    <con:responseContent>{
+  "id" : 1,
+  "category" : {
+    "id" : 0,
+    "name" : "string"
+  },
+  "name" : "doggie",
+  "photoUrls" : [ "string" ],
+  "tags" : [ {
+    "id" : 0,
+    "name" : "string"
+  } ],
+  "status" : "available"
+}</con:responseContent>
+  </con:response>
+  <con:response name="404" id="3edd3a90-b805-4eb6-b944-19bf0ab0f85f" httpResponseStatus="404" mediaType="application/json" dataSource="">
+    <con:settings/>
+    <con:responseContent/>
+  </con:response>
+  <con:response name="id=2" id="26486668-2831-4d01-80cb-fe3abc7dfe32" httpResponseStatus="200" mediaType="application/json" compressedBodyContent="aced00057372002f636f6d2e657669776172652e736f617075692e696d706c2e737570706f72742e436f6d7072657373656456616c7565000b8b02c748eeab0200025a000a636f6d707265737365645b0004646174617400025b4278700070" dataSource="">
+    <con:settings/>
+    <con:responseContent>{
+  "id" : 2,
+  "category" : {
+    "id" : 0,
+    "name" : "string"
+  },
+  "name" : "doggie",
+  "photoUrls" : [ "string" ],
+  "tags" : [ {
+    "id" : 0,
+    "name" : "string"
+  } ],
+  "status" : "available"
+}</con:responseContent>
+  </con:response>
+  <con:response name="id=3" id="de4d5bd3-72c0-4bb3-87d7-70a4477a5994" httpResponseStatus="200" mediaType="application/json" compressedBodyContent="aced00057372002f636f6d2e657669776172652e736f617075692e696d706c2e737570706f72742e436f6d7072657373656456616c7565000b8b02c748eeab0200025a000a636f6d707265737365645b0004646174617400025b4278700070" dataSource="">
+    <con:settings/>
+    <con:responseContent>{
+  "id" : 3,
+  "category" : {
+    "id" : 0,
+    "name" : "string"
+  },
+  "name" : "doggie",
+  "photoUrls" : [ "string" ],
+  "tags" : [ {
+    "id" : 0,
+    "name" : "string"
+  } ],
+  "status" : "available"
+}</con:responseContent>
+  </con:response>
+</con:restMockAction>

@@ -35,5 +35,10 @@ if( !report.hasSubReport( "SystemProperties" ))
     <con:entry environmentId="3c2b8de8-35c0-4232-b2cf-43bc1f990db1">
       <con:authProfile>Inherit From Parent</con:authProfile>
     </con:entry>
+    <con:entry environmentId="673fa818-56dd-4039-a3eb-d66c76e7f936">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
   </con:environmentSpec>
+  <con:tagId>ddff3e20-f57c-4701-aaf8-b7cc0c40465a</con:tagId>
+  <con:tagId>777149a0-3f5d-4d70-8d2d-32dccf4804fa</con:tagId>
 </con:testSuite>

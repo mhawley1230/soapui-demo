@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="bc14f2e0-5bf5-4aab-b07f-b9cf1f4b60d4" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="TestCase 1" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="bc14f2e0-5bf5-4aab-b07f-b9cf1f4b60d4fileName">TestCase-1</con:setting>
+  </con:settings>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:testStep type="jdbc" name="JDBC Request" id="e5ab5f40-2684-4d74-bd5f-3969784a2be9">
+    <con:settings>
+      <con:setting id="prettyPrintResponse">true</con:setting>
+    </con:settings>
+    <con:config xsi:type="con:JdbcRequestTestStep" convertColumnNamesToUpperCase="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:dbConnectionName xsi:nil="true"/>
+      <con:driver>com.smartbear.servicev.jdbc.driver.JdbcVirtDriver</con:driver>
+      <con:connectionString>jdbc:servicev://localhost:10080</con:connectionString>
+      <con:connectionProperties/>
+      <con:query>select * from locations</con:query>
+      <con:properties/>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testCase>

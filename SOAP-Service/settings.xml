@@ -5,12 +5,15 @@
   </con:settings>
   <con:endpoints>
     <con:endpoint>http://127.0.0.1:8083/mockServiceSoapBinding</con:endpoint>
-    <con:endpoint>http://localhost:8088/</con:endpoint>
+    <con:endpoint>http://localhost:8087/</con:endpoint>
     <con:endpoint>http://localhost:8088/</con:endpoint>
     <con:endpoint>http://www.soapui.org/sample</con:endpoint>
   </con:endpoints>
   <con:environmentSpec>
     <con:entry environmentId="3c2b8de8-35c0-4232-b2cf-43bc1f990db1">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+    <con:entry environmentId="673fa818-56dd-4039-a3eb-d66c76e7f936">
       <con:authProfile>Inherit From Parent</con:authProfile>
     </con:entry>
   </con:environmentSpec>

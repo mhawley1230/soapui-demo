@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="a3c93cb3-283d-4a6f-933b-3846d8873d80" discardOkResults="true" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="Search Only" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase id="a3c93cb3-283d-4a6f-933b-3846d8873d80" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="Search Only" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="a3c93cb3-283d-4a6f-933b-3846d8873d80fileName">Search-Only</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  <con:testStep type="datasource" name="DataSource" id="850cb6dc-0d1a-455f-87f2-1abf8d00890f">
-    <con:settings/>
+  <con:testStep type="datasource" name="DataSource" id="532dcbfc-2b51-40dd-8080-2636bb9e22b6">
+    <con:settings>
+      <con:setting id="com.eviware.soapui.impl.wsdl.teststeps.datasource.DataSourceContainer@prepared-properties">&lt;xml-fragment/></con:setting>
+    </con:settings>
     <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:dataSource type="Excel">
         <con:configuration>
@@ -50,21 +52,47 @@
             <ignoreComments>false</ignoreComments>
           </con:configuration>
         </con:assertion>
+        <con:assertion type="JsonPath Existence Match" id="04fa2496-da74-4a3d-a79f-1a70145f362a" name="Check for existence of [sessionid]">
+          <con:configuration>
+            <path>$['sessionid']</path>
+            <content>true</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="MessageContentAssertion" id="9948b70f-7fa0-47bb-9b36-4a7d2500e54d" name="Message Content Assertion">
+          <con:configuration xsi:type="con:MessageContentAssertion">
+            <con:originalMessage>&lt;Response xmlns="http://localhost/login">
+   &lt;sessionid>44399008&lt;/sessionid>
+&lt;/Response></con:originalMessage>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Existence Match" id="ec41465a-6ac8-4845-9f8f-9e24910315b2" name="Check for existence of [sessionid]">
+          <con:configuration>
+            <path>$['sessionid']</path>
+            <content>true</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
         <con:credentials>
-          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
           <con:authType>No Authorization</con:authType>
         </con:credentials>
         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
         <con:jmsPropertyConfig/>
         <con:parameters>
           <con:entry key="password" value="Login123"/>
-          <con:entry key="hasAttachment" value=""/>
-          <con:entry key="username" value="${DataSource#Item ID}"/>
+          <con:entry key="format" value="json"/>
+          <con:entry key="username" value="Login"/>
         </con:parameters>
         <con:parameterOrder>
           <con:entry>username</con:entry>
           <con:entry>password</con:entry>
           <con:entry>hasAttachment</con:entry>
+          <con:entry>format</con:entry>
         </con:parameterOrder>
         <con:environmentSpec>
           <con:entry environmentId="3c2b8de8-35c0-4232-b2cf-43bc1f990db1">
@@ -81,6 +109,15 @@
           </con:entry>
           <con:entry environmentId="b43506b9-1bc1-469f-94ff-9685413847e5">
             <con:authProfile>No Authorization</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="673fa818-56dd-4039-a3eb-d66c76e7f936">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="2b509f92-41a3-4d47-928c-85a4a2a8c75f">
+            <con:authProfile>No Authorization</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="968e6531-b961-4a11-9754-24597a221535">
+            <con:authProfile>Inherit From Parent</con:authProfile>
           </con:entry>
         </con:environmentSpec>
       </con:restRequest>
@@ -111,7 +148,7 @@
             <ignoreComments>false</ignoreComments>
           </con:configuration>
         </con:assertion>
-        <con:assertion type="JsonPath Match" id="86662781-e7db-4051-97df-70c0ba7b5a84" name="Match content of [price]">
+        <con:assertion type="JsonPath Match" id="67b4655e-5d97-44cc-a700-979859c87f31" name="Match content of [price]">
           <con:configuration>
             <path>$['result']['item']['price']</path>
             <content>${DataSource#Price}</content>
@@ -120,13 +157,30 @@
             <ignoreComments>false</ignoreComments>
           </con:configuration>
         </con:assertion>
-        <con:assertion type="JsonSchemaCompliance" id="e4bedae4-c880-4a3c-a47f-9d9a8fbf07ee" name="JSON Schema Compliance">
+        <con:assertion type="MessageContentAssertion" id="5d3c6729-a281-413b-970f-16bedfbba2c2" name="Message Content Assertion">
+          <con:configuration xsi:type="con:MessageContentAssertion">
+            <con:originalMessage><![CDATA[<Response xmlns="http://localhost/search">
+   <result>
+      <item>
+         <id>Item 5</id>
+         <description>Ready! API. All your needs for API readiness</description>
+         <price>599</price>
+      </item>
+   </result>
+</Response>]]></con:originalMessage>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Match" id="b2577d68-309a-406d-a4aa-b2944670dc2f" name="Match content of [price]">
           <con:configuration>
-            <schemaUrl/>
+            <path>$['result']['item']['price']</path>
+            <content>${DataSource#Price}</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
           </con:configuration>
         </con:assertion>
         <con:credentials>
-          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
           <con:authType>No Authorization</con:authType>
         </con:credentials>
         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
@@ -154,6 +208,15 @@
           </con:entry>
           <con:entry environmentId="b43506b9-1bc1-469f-94ff-9685413847e5">
             <con:authProfile>No Authorization</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="673fa818-56dd-4039-a3eb-d66c76e7f936">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="2b509f92-41a3-4d47-928c-85a4a2a8c75f">
+            <con:authProfile>No Authorization</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="968e6531-b961-4a11-9754-24597a221535">
+            <con:authProfile>Inherit From Parent</con:authProfile>
           </con:entry>
         </con:environmentSpec>
       </con:restRequest>
@@ -185,7 +248,7 @@
           </con:configuration>
         </con:assertion>
         <con:credentials>
-          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
           <con:authType>No Authorization</con:authType>
         </con:credentials>
         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
@@ -212,11 +275,20 @@
           <con:entry environmentId="b43506b9-1bc1-469f-94ff-9685413847e5">
             <con:authProfile>No Authorization</con:authProfile>
           </con:entry>
+          <con:entry environmentId="673fa818-56dd-4039-a3eb-d66c76e7f936">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="2b509f92-41a3-4d47-928c-85a4a2a8c75f">
+            <con:authProfile>No Authorization</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="968e6531-b961-4a11-9754-24597a221535">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
         </con:environmentSpec>
       </con:restRequest>
     </con:config>
   </con:testStep>
-  <con:testStep type="datasourceloop" name="DataSource Loop" id="f5544b5f-8d87-4ed0-8531-12be77125767">
+  <con:testStep type="datasourceloop" name="DataSource Loop" id="7479f8a3-32b6-45e2-8ef8-f58734592ebd">
     <con:settings/>
     <con:config>
       <dataSourceStep>DataSource</dataSourceStep>
@@ -230,17 +302,20 @@
   <con:properties/>
   <con:reportParameters/>
   <con:breakPoints>
-    <con:testStepId>850cb6dc-0d1a-455f-87f2-1abf8d00890f</con:testStepId>
+    <con:testStepId>532dcbfc-2b51-40dd-8080-2636bb9e22b6</con:testStepId>
     <con:status>NONE</con:status>
     <con:properties/>
   </con:breakPoints>
   <con:breakPoints>
-    <con:testStepId>f5544b5f-8d87-4ed0-8531-12be77125767</con:testStepId>
+    <con:testStepId>7479f8a3-32b6-45e2-8ef8-f58734592ebd</con:testStepId>
     <con:status>NONE</con:status>
     <con:properties/>
   </con:breakPoints>
   <con:environmentSpec>
     <con:entry environmentId="3c2b8de8-35c0-4232-b2cf-43bc1f990db1">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+    <con:entry environmentId="673fa818-56dd-4039-a3eb-d66c76e7f936">
       <con:authProfile>Inherit From Parent</con:authProfile>
     </con:entry>
   </con:environmentSpec>

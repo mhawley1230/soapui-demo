@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:soapui-project name="LoadTestDemoProject" soapui-version="6.0.0" resourceRoot="${projectDir}" id="61e04082-3ec6-4977-b3af-d6600f20ae9a" abortOnError="false" runType="SEQUENTIAL" activeEnvironment="Default environment" lastOpened="2017-05-10T13:40:04.979-04:00" updated="2.5.0" encryptionMode="Not encrypted" compositeProjectFormat="1.3" xmlns:con="http://eviware.com/soapui/config">
+<con:soapui-project name="LoadTestDemoProject" soapui-version="6.0.0" resourceRoot="${projectDir}" id="61e04082-3ec6-4977-b3af-d6600f20ae9a" abortOnError="false" runType="SEQUENTIAL" activeEnvironment="Default environment" lastOpened="2017-05-10T13:40:04.979-04:00" updated="2.5.0" encryptionMode="Not encrypted" authProfile="kerb" defaultScriptLanguage="Groovy" compositeProjectFormat="1.3" xmlns:con="http://eviware.com/soapui/config">
   <con:description>Sends requests to SOAP- and REST-based local virtual services on different ports.</con:description>
   <con:settings>
     <con:setting id="IncludeOverview">true</con:setting>
@@ -23,45 +23,6 @@
   <con:entry key="Test Suite Tags" value=""/>
   <con:entry key="Select Report Type" value="Test case printable report"/>
   <con:entry key="System Properties" value=""/>
-  <con:entry key="Test Suite" value="SOAP TestSuite"/>
-  <con:entry key="Run in-process" value="false"/>
-  <con:entry key="Password" value=""/>
-  <con:entry key="Print Report" value="true"/>
-  <con:entry key="Open Report" value="false"/>
-  <con:entry key="Test Case Tags" value=""/>
-  <con:entry key="Export JUnit Results with test properties" value="false"/>
-  <con:entry key="Global Properties" value=""/>
-  <con:entry key="Project Properties" value=""/>
-  <con:entry key="Test Case" value="Search and Buy"/>
-  <con:entry key="Slack Access Token" value=""/>
-  <con:entry key="Project Password" value=""/>
-  <con:entry key="Username" value=""/>
-  <con:entry key="user-settings.xml Password" value=""/>
-  <con:entry key="TestRunner Path" value=""/>
-  <con:entry key="Environment" value="Default environment"/>
-  <con:entry key="Coverage Report" value="false"/>
-  <con:entry key="Enable UI" value="false"/>
-  <con:entry key="Root Folder" value=""/>
-  <con:entry key="Ignore Errors" value="false"/>
-  <con:entry key="Domain" value=""/>
-  <con:entry key="Tool Args" value=""/>
-  <con:entry key="Save Project" value="true"/>
-</xml-fragment>]]></con:setting>
-    <con:setting id="Port">8081</con:setting>
-    <con:setting id="61e04082-3ec6-4977-b3af-d6600f20ae9afileName">LoadTestDemoProject</con:setting>
-    <con:setting id="com.eviware.soapui.impl.wsdl.actions.iface.tools.soapui.ProTestRunnerUIAction@values-local"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
-  <con:entry key="Report Format(s)" value="XML"/>
-  <con:entry key="Host:Port" value=""/>
-  <con:entry key="Export JUnit Results" value="true"/>
-  <con:entry key="Export All" value="true"/>
-  <con:entry key="Save After" value="false"/>
-  <con:entry key="Slack Channel(s)" value=""/>
-  <con:entry key="Add Settings" value="false"/>
-  <con:entry key="WSS Password Type" value=""/>
-  <con:entry key="Endpoint" value=""/>
-  <con:entry key="Test Suite Tags" value=""/>
-  <con:entry key="Select Report Type" value="JUnit-Style report for automation"/>
-  <con:entry key="System Properties" value=""/>
   <con:entry key="Test Suite" value="REST TestSuite"/>
   <con:entry key="Run in-process" value="false"/>
   <con:entry key="Password" value=""/>
@@ -79,6 +40,76 @@
   <con:entry key="TestRunner Path" value="C:\Program Files\SmartBear\ReadyAPI-2.5.0\bin"/>
   <con:entry key="Environment" value="Default environment"/>
   <con:entry key="Coverage Report" value="false"/>
+  <con:entry key="Enable UI" value="false"/>
+  <con:entry key="Root Folder" value=""/>
+  <con:entry key="Ignore Errors" value="false"/>
+  <con:entry key="Domain" value=""/>
+  <con:entry key="Tool Args" value=""/>
+  <con:entry key="Save Project" value="false"/>
+</xml-fragment>]]></con:setting>
+    <con:setting id="Port">8081</con:setting>
+    <con:setting id="61e04082-3ec6-4977-b3af-d6600f20ae9afileName">LoadTestDemoProject</con:setting>
+    <con:setting id="com.eviware.soapui.impl.wsdl.actions.iface.tools.soapui.ProTestRunnerUIAction@values-local"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="Report Format(s)" value="PDF"/>
+  <con:entry key="Host:Port" value=""/>
+  <con:entry key="Export JUnit Results" value="true"/>
+  <con:entry key="Export All" value="true"/>
+  <con:entry key="Save After" value="false"/>
+  <con:entry key="Slack Channel(s)" value=""/>
+  <con:entry key="Add Settings" value="false"/>
+  <con:entry key="WSS Password Type" value=""/>
+  <con:entry key="Endpoint" value=""/>
+  <con:entry key="Test Suite Tags" value="TestSuite staging"/>
+  <con:entry key="Select Report Type" value="Test case printable report"/>
+  <con:entry key="System Properties" value=""/>
+  <con:entry key="Test Suite" value="REST TestSuite"/>
+  <con:entry key="Run in-process" value="false"/>
+  <con:entry key="Password" value=""/>
+  <con:entry key="Print Report" value="true"/>
+  <con:entry key="Open Report" value="false"/>
+  <con:entry key="Test Case Tags" value=""/>
+  <con:entry key="Export JUnit Results with test properties" value="false"/>
+  <con:entry key="Global Properties" value=""/>
+  <con:entry key="Project Properties" value=""/>
+  <con:entry key="Test Case" value="Search Only"/>
+  <con:entry key="Slack Access Token" value=""/>
+  <con:entry key="Project Password" value=""/>
+  <con:entry key="Username" value=""/>
+  <con:entry key="user-settings.xml Password" value=""/>
+  <con:entry key="TestRunner Path" value="C:\Program Files\SmartBear\ReadyAPI-2.5.0\bin"/>
+  <con:entry key="Environment" value="STAGING"/>
+  <con:entry key="Coverage Report" value="false"/>
+  <con:entry key="Enable UI" value="false"/>
+  <con:entry key="Root Folder" value="${WORKSPACE}"/>
+  <con:entry key="Ignore Errors" value="false"/>
+  <con:entry key="Domain" value=""/>
+  <con:entry key="Tool Args" value=""/>
+  <con:entry key="Save Project" value="false"/>
+</xml-fragment>]]></con:setting>
+    <con:setting id="com.eviware.soapui.impl.wsdl.actions.iface.tools.support.ProSecurityTestRunnerAction@values-local"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="Report Format(s)" value="PDF"/>
+  <con:entry key="Host:Port" value=""/>
+  <con:entry key="Export JUnit Results" value="true"/>
+  <con:entry key="Export All" value="true"/>
+  <con:entry key="Save After" value="false"/>
+  <con:entry key="Add Settings" value="false"/>
+  <con:entry key="WSS Password Type" value=""/>
+  <con:entry key="Endpoint" value=""/>
+  <con:entry key="Select Report Type" value="Security Issues Report"/>
+  <con:entry key="System Properties" value=""/>
+  <con:entry key="Test Suite" value="&lt;all>"/>
+  <con:entry key="Password" value=""/>
+  <con:entry key="Print Report" value="true"/>
+  <con:entry key="Open Report" value="false"/>
+  <con:entry key="Security Test" value="&lt;all>"/>
+  <con:entry key="Global Properties" value=""/>
+  <con:entry key="Project Properties" value=""/>
+  <con:entry key="Test Case" value="&lt;all>"/>
+  <con:entry key="Project Password" value=""/>
+  <con:entry key="Username" value=""/>
+  <con:entry key="user-settings.xml Password" value=""/>
+  <con:entry key="TestRunner Path" value="C:\Program Files\SmartBear\ReadyAPI-2.5.0\bin"/>
+  <con:entry key="Environment" value="Default environment"/>
   <con:entry key="Enable UI" value="false"/>
   <con:entry key="Root Folder" value="${WORKSPACE}"/>
   <con:entry key="Ignore Errors" value="false"/>
@@ -124,11 +155,33 @@
       <con:password>postgres</con:password>
       <con:connectionProperties/>
     </con:databaseConnection>
+    <con:databaseConnection>
+      <con:name>postgres</con:name>
+      <con:driver>org.postgresql.Driver</con:driver>
+      <con:connectionString>jdbc:postgresql://127.0.0.1:5432/postgres?user=postgres&amp;password=PASS_VALUE</con:connectionString>
+      <con:password>Landof0oo!</con:password>
+      <con:connectionProperties/>
+    </con:databaseConnection>
   </con:databaseConnectionContainer>
   <con:jmsConnectionContainer>
     <con:jmsConnection>
       <con:name>jms</con:name>
-      <con:extraProperties/>
+      <con:connectorLabel xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+      <con:initialContextFactory>org.apache.activemq.jndi.ActiveMQInitialContextFactory</con:initialContextFactory>
+      <con:providerUrl>tcp://localhost:61616</con:providerUrl>
+      <con:connectionFactory>ConnectionFactory</con:connectionFactory>
+      <con:username/>
+      <con:password/>
+      <con:extraProperties>
+        <con:property>
+          <con:name>queue.SampleQueue</con:name>
+          <con:value>SampleQueue</con:value>
+        </con:property>
+        <con:property>
+          <con:name>queue.AnotherQueue</con:name>
+          <con:value>AnotherQueue</con:value>
+        </con:property>
+      </con:extraProperties>
     </con:jmsConnection>
   </con:jmsConnectionContainer>
   <con:oAuth2ProfileContainer>
@@ -145,6 +198,18 @@
     </con:oAuth2Profile>
   </con:oAuth2ProfileContainer>
   <con:oAuth1ProfileContainer/>
+  <con:beforeRunScript/>
+  <con:eventHandlers type="RequestFilter.filterRequest" name="RequestFilter.filterRequest">
+    <con:script/>
+  </con:eventHandlers>
+  <con:eventHandlers type="RequestFilter.afterRequest" name="RequestFilter.afterRequest">
+    <con:script>def x = context.expand("XPATH")
+
+assert x.contains()</con:script>
+  </con:eventHandlers>
+  <con:eventHandlers type="RequestFilter.filterRequest" name="RequestFilter.filterRequest">
+    <con:script/>
+  </con:eventHandlers>
   <con:sensitiveInformation/>
   <con:environment id="44c57cde-8332-417b-91a4-83155379748b" name="TEST">
     <con:service type="SOAP" name="SOAP Service">
@@ -158,6 +223,9 @@
     </con:service>
     <con:service type="REST" name="Ecom">
       <con:endpoint authProfile="Inherit From Parent"/>
+    </con:service>
+    <con:service type="REST" name="Swagger Petstore">
+      <con:endpoint authProfile="Inherit From Parent">http://petstore.swagger.io</con:endpoint>
     </con:service>
     <con:property>
       <con:name>q</con:name>
@@ -183,6 +251,13 @@
         <con:password>postgres</con:password>
         <con:connectionProperties/>
       </con:databaseConnection>
+      <con:databaseConnection>
+        <con:name>postgres</con:name>
+        <con:driver>org.postgresql.Driver</con:driver>
+        <con:connectionString>jdbc:postgresql://127.0.0.1:5432/postgres?user=postgres&amp;password=PASS_VALUE</con:connectionString>
+        <con:password>Landof0oo!</con:password>
+        <con:connectionProperties/>
+      </con:databaseConnection>
     </con:databaseConnectionContainer>
     <con:jmsConnectionContainer>
       <con:jmsConnection>
@@ -202,6 +277,9 @@
       <con:endpoint authProfile="Inherit From Parent"/>
     </con:service>
     <con:service type="REST" name="Ecom">
+      <con:endpoint authProfile="Inherit From Parent"/>
+    </con:service>
+    <con:service type="REST" name="Swagger Petstore">
       <con:endpoint authProfile="Inherit From Parent"/>
     </con:service>
     <con:property>
@@ -226,6 +304,13 @@
         <con:driver>org.postgresql.Driver</con:driver>
         <con:connectionString>jdbc:postgresql://127.0.0.1:5432/nfl_scraper_development?user=postgres&amp;password=PASS_VALUE</con:connectionString>
         <con:password>postgres</con:password>
+        <con:connectionProperties/>
+      </con:databaseConnection>
+      <con:databaseConnection>
+        <con:name>postgres</con:name>
+        <con:driver>org.postgresql.Driver</con:driver>
+        <con:connectionString>jdbc:postgresql://127.0.0.1:5432/postgres?user=postgres&amp;password=PASS_VALUE</con:connectionString>
+        <con:password>Landof0oo!</con:password>
         <con:connectionProperties/>
       </con:databaseConnection>
     </con:databaseConnectionContainer>
@@ -249,6 +334,9 @@
     <con:service type="REST" name="Ecom">
       <con:endpoint authProfile="Inherit From Parent"/>
     </con:service>
+    <con:service type="REST" name="Swagger Petstore">
+      <con:endpoint authProfile="Inherit From Parent"/>
+    </con:service>
     <con:property>
       <con:name>q</con:name>
       <con:value/>
@@ -273,11 +361,143 @@
         <con:password>postgres</con:password>
         <con:connectionProperties/>
       </con:databaseConnection>
+      <con:databaseConnection>
+        <con:name>postgres</con:name>
+        <con:driver>org.postgresql.Driver</con:driver>
+        <con:connectionString>jdbc:postgresql://127.0.0.1:5432/postgres?user=postgres&amp;password=PASS_VALUE</con:connectionString>
+        <con:password>Landof0oo!</con:password>
+        <con:connectionProperties/>
+      </con:databaseConnection>
     </con:databaseConnectionContainer>
     <con:jmsConnectionContainer>
       <con:jmsConnection>
         <con:name>jms</con:name>
         <con:extraProperties/>
+      </con:jmsConnection>
+    </con:jmsConnectionContainer>
+  </con:environment>
+  <con:environment id="2b509f92-41a3-4d47-928c-85a4a2a8c75f" name="STAGING">
+    <con:service type="SOAP" name="SOAP Service">
+      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="">http://127.0.0.1:8083/mockServiceSoapBinding</con:endpoint>
+    </con:service>
+    <con:service type="REST" name="REST Service">
+      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">http://localhost:9090</con:endpoint>
+    </con:service>
+    <con:service type="REST" name="http://localhost:8080">
+      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="">http://localhost:8080</con:endpoint>
+    </con:service>
+    <con:service type="REST" name="Ecom">
+      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="">https://virtserver.swaggerhub.com</con:endpoint>
+    </con:service>
+    <con:service type="REST" name="Swagger Petstore">
+      <con:endpoint authProfile="Inherit From Parent"/>
+    </con:service>
+    <con:property>
+      <con:name>q</con:name>
+      <con:value/>
+    </con:property>
+    <con:property>
+      <con:name>passValue</con:name>
+      <con:value>1</con:value>
+    </con:property>
+    <con:property>
+      <con:name>endpoint</con:name>
+      <con:value>8084</con:value>
+    </con:property>
+    <con:property>
+      <con:name>timestamp</con:name>
+      <con:value/>
+    </con:property>
+    <con:databaseConnectionContainer>
+      <con:databaseConnection>
+        <con:name>nfl_DB</con:name>
+        <con:driver>org.postgresql.Driver</con:driver>
+        <con:connectionString>jdbc:postgresql://127.0.0.1:5432/nfl_scraper_development?user=postgres&amp;password=PASS_VALUE</con:connectionString>
+        <con:password>postgres</con:password>
+        <con:connectionProperties/>
+      </con:databaseConnection>
+      <con:databaseConnection>
+        <con:name>postgres</con:name>
+        <con:driver>org.postgresql.Driver</con:driver>
+        <con:connectionString>jdbc:postgresql://127.0.0.1:5432/postgres?user=postgres&amp;password=PASS_VALUE</con:connectionString>
+        <con:password>Landof0oo!</con:password>
+        <con:connectionProperties/>
+      </con:databaseConnection>
+    </con:databaseConnectionContainer>
+    <con:jmsConnectionContainer>
+      <con:jmsConnection>
+        <con:name>jms</con:name>
+        <con:extraProperties/>
+      </con:jmsConnection>
+    </con:jmsConnectionContainer>
+  </con:environment>
+  <con:environment id="968e6531-b961-4a11-9754-24597a221535" name="DEV">
+    <con:service type="SOAP" name="SOAP Service">
+      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="">http://127.0.0.1:8083/mockServiceSoapBinding</con:endpoint>
+    </con:service>
+    <con:service type="REST" name="REST Service">
+      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">http://localhost:9090</con:endpoint>
+    </con:service>
+    <con:service type="REST" name="http://localhost:8080">
+      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="">http://localhost:8080</con:endpoint>
+    </con:service>
+    <con:service type="REST" name="Ecom">
+      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="">https://virtserver.swaggerhub.com</con:endpoint>
+    </con:service>
+    <con:service type="REST" name="Swagger Petstore">
+      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="">http://localhost:8088/</con:endpoint>
+    </con:service>
+    <con:property>
+      <con:name>q</con:name>
+      <con:value/>
+    </con:property>
+    <con:property>
+      <con:name>passValue</con:name>
+      <con:value>1</con:value>
+    </con:property>
+    <con:property>
+      <con:name>endpoint</con:name>
+      <con:value>8084</con:value>
+    </con:property>
+    <con:property>
+      <con:name>timestamp</con:name>
+      <con:value/>
+    </con:property>
+    <con:databaseConnectionContainer>
+      <con:databaseConnection>
+        <con:name>nfl_DB</con:name>
+        <con:driver>org.postgresql.Driver</con:driver>
+        <con:connectionString>jdbc:postgresql://127.0.0.1:5432/nfl_scraper_development?user=postgres&amp;password=PASS_VALUE</con:connectionString>
+        <con:password>postgres</con:password>
+        <con:connectionProperties/>
+      </con:databaseConnection>
+      <con:databaseConnection>
+        <con:name>postgres</con:name>
+        <con:driver>org.postgresql.Driver</con:driver>
+        <con:connectionString>jdbc:postgresql://127.0.0.1:5432/postgres?user=postgres&amp;password=PASS_VALUE</con:connectionString>
+        <con:password>Landof0oo!</con:password>
+        <con:connectionProperties/>
+      </con:databaseConnection>
+    </con:databaseConnectionContainer>
+    <con:jmsConnectionContainer>
+      <con:jmsConnection>
+        <con:name>jms</con:name>
+        <con:connectorLabel xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+        <con:initialContextFactory>org.apache.activemq.jndi.ActiveMQInitialContextFactory</con:initialContextFactory>
+        <con:providerUrl>tcp://localhost:61616</con:providerUrl>
+        <con:connectionFactory>ConnectionFactory</con:connectionFactory>
+        <con:username/>
+        <con:password/>
+        <con:extraProperties>
+          <con:property>
+            <con:name>queue.SampleQueue</con:name>
+            <con:value>SampleQueue</con:value>
+          </con:property>
+          <con:property>
+            <con:name>queue.AnotherQueue</con:name>
+            <con:value>AnotherQueue</con:value>
+          </con:property>
+        </con:extraProperties>
       </con:jmsConnection>
     </con:jmsConnectionContainer>
   </con:environment>
@@ -290,6 +510,10 @@
       <con:name>asdf</con:name>
       <con:type>Basic</con:type>
     </con:basicAuthEntry>
+    <con:kerberosAuthEntry>
+      <con:name>kerb</con:name>
+      <con:type>SPNEGO/Kerberos</con:type>
+    </con:kerberosAuthEntry>
     <con:oAuth20AuthEntry>
       <con:name>test</con:name>
       <con:type>OAuth 2.0</con:type>
@@ -301,11 +525,35 @@
       <con:jwtConfiguration/>
       <con:responseType>id_token</con:responseType>
     </con:oAuth20AuthEntry>
+    <con:oAuth20AzureAuthEntry>
+      <con:name>azure</con:name>
+      <con:type>OAuth 2.0 (Azure)</con:type>
+      <con:accessTokenPosition>HEADER</con:accessTokenPosition>
+      <con:oAuth2Flow>AUTHORIZATION_CODE_GRANT</con:oAuth2Flow>
+      <con:refreshAccessTokenMethod>AUTOMATIC</con:refreshAccessTokenMethod>
+      <con:jwtConfiguration/>
+      <con:responseType>id_token</con:responseType>
+    </con:oAuth20AzureAuthEntry>
   </con:authRepository>
   <con:environmentSpec>
     <con:entry environmentId="3c2b8de8-35c0-4232-b2cf-43bc1f990db1">
       <con:authProfile>No Authorization</con:authProfile>
     </con:entry>
+    <con:entry environmentId="673fa818-56dd-4039-a3eb-d66c76e7f936">
+      <con:authProfile>No Authorization</con:authProfile>
+    </con:entry>
+    <con:entry environmentId="968e6531-b961-4a11-9754-24597a221535">
+      <con:authProfile>No Authorization</con:authProfile>
+    </con:entry>
   </con:environmentSpec>
-  <con:tags/>
+  <con:tags>
+    <con:tag>
+      <con:id>ddff3e20-f57c-4701-aaf8-b7cc0c40465a</con:id>
+      <con:name>staging</con:name>
+    </con:tag>
+    <con:tag>
+      <con:id>777149a0-3f5d-4d70-8d2d-32dccf4804fa</con:id>
+      <con:name>product</con:name>
+    </con:tag>
+  </con:tags>
 </con:soapui-project>

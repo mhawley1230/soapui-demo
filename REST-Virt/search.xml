@@ -189,7 +189,7 @@
   }
 }</con:responseContent>
   </con:response>
-  <con:response name="Invalid Session Id Fault" id="7fb6a664-c1f0-4ce1-bb9b-f2cd50795807" httpResponseStatus="200" dataSource="" mediaType="application/json">
+  <con:response name="Invalid Session Id Fault" id="7fb6a664-c1f0-4ce1-bb9b-f2cd50795807" httpResponseStatus="200" dataSource="" mediaType="application/json" compressedBodyContent="aced00057372002f636f6d2e657669776172652e736f617075692e696d706c2e737570706f72742e436f6d7072657373656456616c7565000b8b02c748eeab0200025a000a636f6d707265737365645b0004646174617400025b4278700070">
     <con:settings/>
     <con:responseContent>{"Failed" : "Invalid Session Id"}</con:responseContent>
   </con:response>
@@ -257,7 +257,7 @@
     <con:settings/>
     <con:responseContent>{"No Result" : "The search returned no items"}</con:responseContent>
   </con:response>
-  <con:response name="Unknown Response" id="e73be179-0603-4d90-acd8-c5180438a39e" httpResponseStatus="200" mediaType="application/json" dataSource="">
+  <con:response name="Unknown Response" id="e73be179-0603-4d90-acd8-c5180438a39e" httpResponseStatus="200" mediaType="application/json" dataSource="" compressedBodyContent="aced00057372002f636f6d2e657669776172652e736f617075692e696d706c2e737570706f72742e436f6d7072657373656456616c7565000b8b02c748eeab0200025a000a636f6d707265737365645b0004646174617400025b4278700070">
     <con:settings/>
     <con:responseContent>{ "Client" : "Unknown Search String" }</con:responseContent>
   </con:response>

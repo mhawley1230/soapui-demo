@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testSuite id="9be134a8-4114-42fe-9763-12bc1b977d04" name="JDBC TestCase" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="9be134a8-4114-42fe-9763-12bc1b977d04fileName">JDBC-TestCase</con:setting>
+  </con:settings>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:runType>SEQUENTIAL</con:runType>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testSuite>

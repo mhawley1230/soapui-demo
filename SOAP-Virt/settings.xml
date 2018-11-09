@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:mockService id="0cd17cd8-526c-40cf-a59b-6741446864de" port="8088" path="/" host="localhost" name="SOAP Virt" routeModeEnabled="false" routeUnmatchedOperation="true" xmlns:con="http://eviware.com/soapui/config">
+<con:mockService id="0cd17cd8-526c-40cf-a59b-6741446864de" port="8087" path="/" host="localhost" name="SOAP Virt" routeModeEnabled="false" routeUnmatchedOperation="true" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="com.eviware.soapui.impl.wsdl.mock.WsdlMockService@require-soap-action">false</con:setting>
     <con:setting id="0cd17cd8-526c-40cf-a59b-6741446864defileName">SOAP-Virt</con:setting>

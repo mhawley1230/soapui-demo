@@ -7,4 +7,10 @@
   <con:runType>SEQUENTIAL</con:runType>
   <con:properties/>
   <con:reportParameters/>
+  <con:environmentSpec>
+    <con:entry environmentId="673fa818-56dd-4039-a3eb-d66c76e7f936">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
+  <con:tagId>777149a0-3f5d-4d70-8d2d-32dccf4804fa</con:tagId>
 </con:testSuite>

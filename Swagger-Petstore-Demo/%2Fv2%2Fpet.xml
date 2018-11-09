@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:restMockAction name="/v2/pet" method="POST" resourcePath="/v2/pet" id="1aed72aa-16ef-4f85-97f7-8dbc7c94bf1e" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="1aed72aa-16ef-4f85-97f7-8dbc7c94bf1efileName">%2Fv2%2Fpet</con:setting>
+  </con:settings>
+  <con:dispatchStyle>SEQUENCE</con:dispatchStyle>
+  <con:dispatchConfig/>
+  <con:dispatchXPath/>
+  <con:routeScript/>
+  <con:response name="Response 1" id="229fcb53-6c78-4910-bf83-d31642829bec" httpResponseStatus="405" mediaType="application/xml" dataSource="">
+    <con:settings/>
+    <con:responseContent/>
+  </con:response>
+  <con:response name="Response 2" id="b7fd7e7b-8381-4cfd-8e64-92c742c58fe9" httpResponseStatus="405" mediaType="application/json" dataSource="">
+    <con:settings/>
+    <con:responseContent/>
+  </con:response>
+</con:restMockAction>

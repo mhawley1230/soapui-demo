@@ -9,27 +9,12 @@
       <con:setting id="com.eviware.soapui.impl.wsdl.teststeps.datasource.DataSourceContainer@prepared-properties">&lt;xml-fragment/></con:setting>
     </con:settings>
     <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:dataSource type="Groovy">
+      <con:dataSource type="Data Connection">
         <con:configuration>
-          <script>/*
-// A sample groovy data source script.
-// This groovy data source script generates property values by executing a groovy script.
-// To get the output value, use the built-in result map object.
-
-def groovyUtils = new com.eviware.soapui.support.GroovyUtils(context)
-def projectPath = groovyUtils.projectPath
-def directoryName = projectPath + "/testData"
-def row = testRunner.testCase.testSteps["DataSource"].currentRow
-def allFiles = []
-new File( directoryName ).eachFile() { file ->
-	if( file.name =~ /.txt/ ) {
-		allFiles.add( file.name )	}
-}
-if ( (row + 1) &lt;= allFiles.size ) {
-	// output to the test step property called inputData
-	result["inputData"] = new File( directoryName + "/" + allFiles[row] ).text
-}
-*/</script>
+          <Connection>&lt;None></Connection>
+          <query/>
+          <fetchSize/>
+          <stored-procedure>false</stored-procedure>
         </con:configuration>
       </con:dataSource>
       <con:shared>true</con:shared>
@@ -76,19 +61,30 @@ if ( (row + 1) &lt;= allFiles.size ) {
             <ignoreComments>false</ignoreComments>
           </con:configuration>
         </con:assertion>
+        <con:assertion type="JsonPath Existence Match" id="70caa73f-35a7-447c-b124-fea42149fcf0" name="Check for existence of [sessionid]">
+          <con:configuration>
+            <path>$['sessionid']</path>
+            <content>true</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
         <con:credentials>
-          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
           <con:authType>No Authorization</con:authType>
         </con:credentials>
         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
         <con:parameters>
           <con:entry key="password" value="Login123"/>
+          <con:entry key="format" value=""/>
           <con:entry key="username" value="Login"/>
         </con:parameters>
         <con:parameterOrder>
           <con:entry>username</con:entry>
           <con:entry>password</con:entry>
           <con:entry>hasAttachment</con:entry>
+          <con:entry>format</con:entry>
         </con:parameterOrder>
         <con:environmentSpec>
           <con:entry environmentId="3c2b8de8-35c0-4232-b2cf-43bc1f990db1">
@@ -105,6 +101,15 @@ if ( (row + 1) &lt;= allFiles.size ) {
           </con:entry>
           <con:entry environmentId="b43506b9-1bc1-469f-94ff-9685413847e5">
             <con:authProfile>No Authorization</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="673fa818-56dd-4039-a3eb-d66c76e7f936">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="2b509f92-41a3-4d47-928c-85a4a2a8c75f">
+            <con:authProfile>No Authorization</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="968e6531-b961-4a11-9754-24597a221535">
+            <con:authProfile>Inherit From Parent</con:authProfile>
           </con:entry>
         </con:environmentSpec>
       </con:restRequest>
@@ -139,7 +144,7 @@ if ( (row + 1) &lt;= allFiles.size ) {
           </con:configuration>
         </con:assertion>
         <con:credentials>
-          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
           <con:authType>No Authorization</con:authType>
         </con:credentials>
         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
@@ -167,6 +172,15 @@ if ( (row + 1) &lt;= allFiles.size ) {
           <con:entry environmentId="b43506b9-1bc1-469f-94ff-9685413847e5">
             <con:authProfile>No Authorization</con:authProfile>
           </con:entry>
+          <con:entry environmentId="673fa818-56dd-4039-a3eb-d66c76e7f936">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="2b509f92-41a3-4d47-928c-85a4a2a8c75f">
+            <con:authProfile>No Authorization</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="968e6531-b961-4a11-9754-24597a221535">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
         </con:environmentSpec>
       </con:restRequest>
     </con:config>
@@ -191,7 +205,7 @@ if ( (row + 1) &lt;= allFiles.size ) {
           </con:configuration>
         </con:assertion>
         <con:credentials>
-          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
           <con:authType>No Authorization</con:authType>
         </con:credentials>
         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
@@ -217,6 +231,15 @@ if ( (row + 1) &lt;= allFiles.size ) {
           <con:entry environmentId="b43506b9-1bc1-469f-94ff-9685413847e5">
             <con:authProfile>No Authorization</con:authProfile>
           </con:entry>
+          <con:entry environmentId="673fa818-56dd-4039-a3eb-d66c76e7f936">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="2b509f92-41a3-4d47-928c-85a4a2a8c75f">
+            <con:authProfile>No Authorization</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="968e6531-b961-4a11-9754-24597a221535">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
         </con:environmentSpec>
       </con:restRequest>
     </con:config>
@@ -241,4 +264,9 @@ if ( (row + 1) &lt;= allFiles.size ) {
     <con:status>NONE</con:status>
     <con:properties/>
   </con:breakPoints>
+  <con:environmentSpec>
+    <con:entry environmentId="673fa818-56dd-4039-a3eb-d66c76e7f936">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
 </con:testCase>
